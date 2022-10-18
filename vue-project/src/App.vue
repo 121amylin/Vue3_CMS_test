@@ -1,9 +1,29 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import ElementPlus from './components/ElementPlus.vue'
+import ElementDate from './components/ElementDate.vue'
+import {
+  Check,
+  Delete,
+  Edit,
+  Message,
+  Search,
+  Star,
+} from '@element-plus/icons-vue'
+import { ref } from 'vue'
+
+const input = ref('')
+const num = ref(1)
+const handleChange = (value) => {
+  console.log(value)
+}
 </script>
 
 <template>
+
+  <el-input v-model="input" placeholder="Please input" />
+  <br>
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
@@ -18,6 +38,47 @@ import HelloWorld from './components/HelloWorld.vue'
   </header>
 
   <RouterView />
+  <ElementPlus />
+  <ElementDate />
+
+   <el-row class="mb-4">
+    <el-button>Default</el-button>
+    <el-button type="primary">Primary</el-button>
+    <el-button type="success">Success</el-button>
+    <el-button type="info">Info</el-button>
+    <el-button type="warning">Warning</el-button>
+    <el-button type="danger">Danger</el-button>
+  </el-row>
+
+  <el-row class="mb-4">
+    <el-button plain>Plain</el-button>
+    <el-button type="primary" plain>Primary</el-button>
+    <el-button type="success" plain>Success</el-button>
+    <el-button type="info" plain>Info</el-button>
+    <el-button type="warning" plain>Warning</el-button>
+    <el-button type="danger" plain>Danger</el-button>
+  </el-row>
+
+  <el-row class="mb-4">
+    <el-button round>Round</el-button>
+    <el-button type="primary" round>Primary</el-button>
+    <el-button type="success" round>Success</el-button>
+    <el-button type="info" round>Info</el-button>
+    <el-button type="warning" round>Warning</el-button>
+    <el-button type="danger" round>Danger</el-button>
+  </el-row>
+
+  <el-row>
+    <el-button :icon="Search" circle />
+    <el-button type="primary" :icon="Edit" circle />
+    <el-button type="success" :icon="Check" circle />
+    <el-button type="info" :icon="Message" circle />
+    <el-button type="warning" :icon="Star" circle />
+    <el-button type="danger" :icon="Delete" circle />
+  </el-row>
+
+  
+  <el-input-number v-model="num" :min="1" :max="10" @change="handleChange" />
 </template>
 
 <style scoped>
@@ -81,5 +142,14 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
+}
+
+.el-button--success{
+  --el-button-bg-color: #4b7038;
+}
+.el-button{
+  color: #000;
+  vertical-align:top;
+  height: 50px;
 }
 </style>

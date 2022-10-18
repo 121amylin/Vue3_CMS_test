@@ -20,7 +20,22 @@
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
 }
-
+/* .el-button--success {
+  --el-button-text-color: #000;
+  --el-button-bg-color: #000;
+  --el-button-border-color: #000;
+  --el-button-outline-color: #000;
+  --el-button-active-color: #000;
+  --el-button-hover-text-color: #000;
+  --el-button-hover-link-text-color: #000;
+  --el-button-hover-bg-color: #000;
+  --el-button-hover-border-color: #000;
+  --el-button-active-bg-color: #000;
+  --el-button-active-border-color: #000;
+  --el-button-disabled-text-color: #000;
+  --el-button-disabled-bg-color: #000;
+  --el-button-disabled-border-color: #000;
+} */
 /* semantic color variables for this project */
 :root {
   --color-background: var(--vt-c-white);
@@ -65,8 +80,9 @@ body {
   background: var(--color-background);
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   font-size: 15px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
