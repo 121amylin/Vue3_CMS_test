@@ -1,9 +1,9 @@
 <script setup>
 const handleOpen = (key, keyPath) => {
-    console.log(key, keyPath)
+    // console.log(key, keyPath)
 }
 const handleClose = (key, keyPath) => {
-    console.log(key, keyPath)
+    // console.log(key, keyPath)
 }
 </script>
 
@@ -37,7 +37,7 @@ const handleClose = (key, keyPath) => {
                 </el-aside>
                 <el-main>
                     <RouterView />
-                    111
+                  
                 </el-main>
             </el-container>
         </el-container>
