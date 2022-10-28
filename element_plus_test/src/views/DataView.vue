@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="DataView">
+    <h1>This is an DataView page</h1>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="FormView">
+    <h1>This is an FormView page</h1>
   </div>
 </template>
 

@@ -29,6 +29,20 @@ const toggleMenu = function () {
   <div class="menu">
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/about">About</RouterLink>
+    
+    <RouterLink to="/basic">Basic</RouterLink>
+    
+    <RouterLink to="/config">Config</RouterLink>
+    
+    <RouterLink to="/form">Form</RouterLink>
+    
+    <RouterLink to="/data">Data</RouterLink>
+    
+    <RouterLink to="/navigation">Navigation</RouterLink>
+    
+    <RouterLink to="/feedback">Feedback</RouterLink>
+
+    <RouterLink to="/others">Others</RouterLink>
   </div>
 
   <RouterView />
