@@ -1,87 +1,58 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterView, RouterLink } from 'vue-router'
+import c_nav from './components/Nav.vue'
+import c_header from './components/Header.vue'
+import { ref } from 'vue'
+const menuIsOpen = ref(false)
+const toggleMenu = function () {
+  console.log('轉換')
+  menuIsOpen.value = !menuIsOpen.value
+}
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <!-- 單向資料流範例 start -->
+  {{ menuIsOpen }}
+  <c_header @deliver="toggleMenu"></c_header>
+  <c_nav :open="menuIsOpen" @deliver="toggleMenu"></c_nav>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
+
+  <!-- [重構倒數第03天] - One-Way Data Flow 單向資料流 -->
+  <!-- https://ithelp.ithome.com.tw/articles/10273655 -->
+
+  <!-- Vite with Vue3中如何使用emit -->
+  <!-- https://ithelp.ithome.com.tw/questions/10205599 -->
+
+  <!-- 單向資料流範例 end -->
+
+  <div class="menu">
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/about">About</RouterLink>
+  </div>
 
   <RouterView />
 
 </template>
 
 <style lang="scss" scoped>
+.menu {
+  display: flex;
 
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
+  a {
+    display: block;
+    padding: 10px;
+    background-color: #eee;
+    transition: background .3s;
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+    +a {
+      margin-left: 10px;
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
+      &:hover {
+        background-color: #bbb;
+      }
+    }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
   }
 }
 </style>
