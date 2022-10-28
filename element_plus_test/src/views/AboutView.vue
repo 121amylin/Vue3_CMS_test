@@ -4,6 +4,6 @@
   </div>
 </template>
 
-<style leng="SCSS" scoped>
+<style lang="scss" scoped>
 
 </style>

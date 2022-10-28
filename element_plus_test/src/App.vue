@@ -44,6 +44,8 @@ const toggleMenu = function () {
 
     <RouterLink to="/others">Others</RouterLink>
   </div>
+  <hr>
+  
 
   <RouterView />
 

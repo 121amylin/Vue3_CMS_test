@@ -1,5 +1,10 @@
 @import './base.css';
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 * {
   font-size: 20px;
 }
@@ -19,4 +24,68 @@ button {
 a {
   text-decoration: none;
   color: #000;
+  transition: color .3s;
+}
+
+a:hover {
+  color: #606266;
+}
+
+a.link {
+  text-decoration: none;
+  color: #529b2e;
+  transition: color .3s;
+}
+
+a.link:hover {
+  color: #95d475;
+}
+
+hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-weight: 24px;
+  font-weight: 700;
+  padding: 4px 16px;
+  background-color: #ddd;
+  text-align: center;
+  margin: 20px 0;
+}
+
+h3 {
+  font-weight: 700;
+  padding: 4px 16px;
+  background-color: #eee;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
+.unit_btn_box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.unit_btn_box a {
+  padding: 4px 24px;
+  margin: 12px 10px;
+  position: relative;
+
+}
+
+.unit_btn_box a:hover {
+  background-color: #eee;
+}
+
+.unit_btn_box a+a::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: -10px;
+  top: 0;
+  background-color: #000;
 }
