@@ -6,8 +6,13 @@ const DOME_1_toggleIsOpen = function () {
 }
 
 const DOME_2_isOpen = ref(false)
-const DOME_2_toggleOpen= function () {
+const DOME_2_toggleOpen = function () {
     DOME_2_isOpen.value = !DOME_2_isOpen.value
+}
+
+const DOME_3_isOpen = ref(false)
+const DOME_3_toggleOpen = function () {
+    DOME_3_isOpen.value = !DOME_3_isOpen.value
 }
 </script>
 <template>
@@ -28,6 +33,13 @@ const DOME_2_toggleOpen= function () {
 
     <!-- 三、Vue 的 transition 動畫 -->
     <!-- 除了透過切換 class 加入動畫以外，Vue 提供了一個 transition 的 component，讓我們可以用簡單的方式可以處理 component 之間的過渡動畫，我們只需要把你要執行動畫的 component 給包起來，透過 v-if 或是 v-show 就可以使用了。 -->
+    <div id="dome_3">
+        <p><mark>【【DOME 3】</mark></p>
+        <button @click="DOME_3_toggleOpen">開關</button>
+        <transition name="fade">
+            <div v-show="DOME_3_isOpen">123</div>
+        </transition>
+    </div>
 </template>
 <style lang="scss" scoped>
 #dome_1 {
@@ -74,6 +86,17 @@ const DOME_2_toggleOpen= function () {
         opacity: 100%;
         transform: translateX(100px);
     }
+}
+
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
 }
 </style>
 

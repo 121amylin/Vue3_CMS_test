@@ -54,6 +54,33 @@ const router = createRouter({
       name: 'others',
       component: () => import('../views/OthersView.vue')
     },
+    {
+      path: '/transitionView',
+      name: 'transitionView',
+      component: () => import('../views/TransitionView.vue')
+    },
+    {
+      path: '/carouselOneWay',
+      name: 'carouselOneWay',
+      component: () => import('../views/CarouselOneWayView.vue')
+    },
+    {
+      path: '/CarouselTwoWay',
+      name: 'CarouselTwoWay',
+      component: () => import('../views/CarouselTwoWayView.vue')
+    },
+    {
+      path: '/computedView',
+      name: 'computedView',
+      component: () => import('../views/ComputedView.vue')
+    },
+    {
+      path: '/GSAP',
+      name: 'GSAP',
+      component: () => import('../views/GSAPView.vue')
+    },
+
+
   ]
 })
 
