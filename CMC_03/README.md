@@ -12,6 +12,28 @@
 - [Commitlint 使用总结](https://blog.csdn.net/qq_38290251/article/details/111646491)
 
 ---
+### vue3.2 新特性
+1. template內不用跟元素
+2. CSS可以直接綁定JS變量  
+<!--\src\components\WelcomeItem.vue -->
+```javascript
+<script setup>
+  const boxWidth="100px"
+</script>
+<template>
+  <div class="box">
+  </div>
+</template>
+
+<style lang="scss">
+.box{
+  width: v-bind(boxWidth);
+  height: 100px;
+  background-color: red;
+  margin-bottom: 10px;
+}
+</style>
+```
 
 ---
 
