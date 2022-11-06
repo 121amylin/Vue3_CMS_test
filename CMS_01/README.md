@@ -11,7 +11,13 @@
 $ npm install element-plus --save
 ```
 
-### 加載
+### 按需导入
+```javascript
+// NPM
+npm install -D unplugin-vue-components unplugin-auto-import
+```
+
+### 加載___main.ts
 ```javascript
     // main.ts
     import { createApp } from 'vue'
@@ -23,6 +29,29 @@ $ npm install element-plus --save
 
     app.use(ElementPlus)
     app.mount('#app')
+```
+
+
+### 加載___vite.config.ts
+```javascript
+// vite.config.ts
+import { defineConfig } from 'vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+
+export default defineConfig({
+  // ...
+  plugins: [
+    // ...
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
+    }),
+  ],
+})
 ```
 ------------------------------------------------------------------------------------------------------------------------
 
