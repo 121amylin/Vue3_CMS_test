@@ -36,6 +36,19 @@
 ```
 
 ---
+### SVG 封裝
+- [Vite 项目使用 Svg 实践](https://juejin.cn/post/7055854475869126669)
+<!-- https://juejin.cn/post/7036949769842851854 -->
+<!-- https://blog.51cto.com/mouday/5554332 -->
+
+
+
+---
+
+---
+
+---
+
 
 ---
 
