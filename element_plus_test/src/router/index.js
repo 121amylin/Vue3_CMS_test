@@ -78,6 +78,11 @@ const router = createRouter({
       path: '/GSAP',
       name: 'GSAP',
       component: () => import('../views/GSAPView.vue')
+    },    
+    {
+      path: '/ScrollBar',
+      name: 'ScrollBar',
+      component: () => import('../views/ScrollBarView.vue')
     },
 
 

@@ -49,6 +49,10 @@ const toggleMenu = function () {
 
     <RouterLink to="/others">Others</RouterLink>
   </div>
+
+  <div class="menu components_menu">
+    <RouterLink to="/ScrollBar">ScrollBar</RouterLink>
+  </div>
   <hr>
 
 
@@ -59,12 +63,14 @@ const toggleMenu = function () {
 <style lang="scss" scoped>
 .menu {
   display: flex;
+  flex-wrap: wrap;
 
   a {
     display: block;
     padding: 10px;
     background-color: #eee;
     transition: background .3s;
+    margin: 4px 0;
 
     +a {
       margin-left: 10px;
@@ -74,6 +80,17 @@ const toggleMenu = function () {
       }
     }
 
+  }
+}
+
+.components_menu {
+  a {
+
+    background-color: rgb(224, 234, 255);
+
+    &:hover {
+      background-color: rgb(206, 222, 255);
+    }
   }
 }
 </style>

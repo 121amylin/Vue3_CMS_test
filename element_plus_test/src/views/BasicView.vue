@@ -34,6 +34,8 @@ const buttons = [
       <a href="#icon">Icon 圖標 筆記</a>
       <a href="https://element-plus.org/zh-CN/component/layout.html" target="_blank">Layout 布局</a>
       <a href="#layout">Layout 布局 筆記</a>
+      <a href="#Link">Link 布局 筆記</a>
+      <a href="#Scrollbar">Scrollbar 滚动条 筆記</a>
     </div>
     <hr>
     <!-- 按鈕 -->
@@ -301,6 +303,8 @@ const buttons = [
       <p>通过制定 col 组件的 offset 属性可以指定分栏偏移的栏数。</p>
       <p>col 组件預設了五个響應尺寸：xs、sm、md、lg 和 xl，提供響應式設計</p>
       <p>屬性名:span、offset、push、pull、xs、sm、md、lg、xl、tag</p>
+      <p>用 offset 調整元素位置會影響相鄰元素排版，margin-left</p>
+      <p>用 push、pull 調整元素位置不會影響相鄰元素排版，relative + push = > left 、 pull = > right</p>
 
       <el-row :gutter="20">
         <el-col :span="24">111</el-col>
@@ -321,6 +325,54 @@ const buttons = [
         <el-col :xs="24" :md="12" :lg="8">111</el-col>
         <el-col :xs="24" :md="12" :lg="8">111</el-col>
       </el-row>
+    </div>
+    <hr>
+    <!-- Link 链接 筆記 -->
+    <div id="Link">
+      <h1>Link 链接筆記</h1>
+      <p><a class="link" href="https://element-plus.org/zh-CN/component/link.html" target="_blank">官網</a></p>
+      <p>el-link 組件</p>
+      <p>屬性 type、disabled、:underline="false"、:icon="Edit"</p>
+      <p>:underline，預設 true</p>
+      <el-link type="primary">primary</el-link>
+      <el-link type="success">success</el-link>
+      <el-link disabled>default</el-link>
+      <el-link type="primary" disabled>primary</el-link>
+      <el-link :underline="false">Without Underline</el-link>
+      <el-link>With Underline</el-link>
+      <el-link :icon="Edit">Edit</el-link>
+      <el-link>
+        Check<el-icon class="el-icon--right">
+          <icon-view />
+        </el-icon>
+      </el-link>
+    </div>
+
+    <hr>
+    <!-- Scrollbar 滚动条 筆記 -->
+    <div id="Link">
+      <h1>Scrollbar 滚动条筆記</h1>
+      <p><a class="link"
+          href="https://element-plus.org/zh-CN/component/scrollbar.html#%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95"
+          target="_blank">官網</a></p>
+      <p>el-scrollbar 組件</p>
+      <p>Y 向捲軸，需設置 max-height 或 height 屬性</p>
+      <p>X 向捲軸，当元素宽度大于滚动条宽度时，会显示横向滚动条</p>
+      <p>通过使用 setScrollTop 与 setScrollLeft 方法，可以手动控制滚动条滚动。</p>
+      <p>屬性 type、disabled、:underline="false"、:icon="Edit"</p>
+      <p>:underline，預設 true</p>
+      <el-link type="primary">primary</el-link>
+      <el-link type="success">success</el-link>
+      <el-link disabled>default</el-link>
+      <el-link type="primary" disabled>primary</el-link>
+      <el-link :underline="false">Without Underline</el-link>
+      <el-link>With Underline</el-link>
+      <el-link :icon="Edit">Edit</el-link>
+      <el-link>
+        Check<el-icon class="el-icon--right">
+          <icon-view />
+        </el-icon>
+      </el-link>
     </div>
   </div>
 
