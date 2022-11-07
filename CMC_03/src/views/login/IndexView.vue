@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+import { login } from "../../api/login";
 import { Setting, User } from "@element-plus/icons-vue";
 const form = ref({
   userName: "",
@@ -12,9 +13,10 @@ const rules = ref({
 });
 const formRef = ref(null);
 const handleLogin = () => {
-  formRef.value.validate((valid) => {
+  formRef.value.validate(async (valid) => {
     if (valid) {
-      alert("submit!");
+      // alert("submit!");
+      await login(form.value)
     } else {
       console.log("error submit!!");
       return false;
