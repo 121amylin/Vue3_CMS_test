@@ -10,7 +10,7 @@ const input = ref({
   <div class="login_page">
     <div class="login_container">
       <h3 class="page_title">login</h3>
-      <el-form :model="form" label-width="120px">
+      <el-form :model="form" label-width="120px" class="login_form">
         <div class="input_item">
           <el-icon :size="size" :color="color">
             <User />
@@ -28,7 +28,7 @@ const input = ref({
             show-password
           />
         </div>
-        <el-button type="primary" round>送出</el-button></el-form
+        <el-button type="primary" >送出</el-button></el-form
       >
     </div>
   </div>

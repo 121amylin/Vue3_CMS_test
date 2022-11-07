@@ -5,8 +5,10 @@ import App from "./App.vue";
 import router from "./router";
 import "./styles/index.scss";
 import "./assets/main.css";
+// import svgIcon from './icons/index'
 
 const app = createApp(App);
+// svgIcon(app)
 app.use(ElementPlus);
 app.use(router);
 
