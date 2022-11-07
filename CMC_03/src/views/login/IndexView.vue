@@ -1,35 +1,53 @@
 <script setup>
 import { ref } from "vue";
 import { Setting, User } from "@element-plus/icons-vue";
-const input = ref({
+const form = ref({
   userName: "",
   userPassword: "",
 });
+
+const rules = ref({
+  userName: [{ required: true, message: "請輸入使用者名稱", trigger: "blur" }],
+  userPassword: [{ required: true, message: "請輸入密碼", trigger: "blur" }],
+});
+const formRef = ref(null);
+const handleLogin = () => {
+  formRef.value.validate((valid) => {
+    if (valid) {
+      alert("submit!");
+    } else {
+      console.log("error submit!!");
+      return false;
+    }
+  });
+};
+// https://element.eleme.io/#/zh-CN/component/form#biao-dan-yan-zheng
+
 </script>
 <template>
   <div class="login_page">
     <div class="login_container">
       <h3 class="page_title">login</h3>
-      <el-form :model="form" label-width="120px" class="login_form">
-        <div class="input_item">
-          <el-icon :size="size" :color="color">
+      <el-form ref="formRef" :model="form" class="login_form" :rules="rules">
+        <el-form-item class="input_item" prop="userName">
+          <el-icon>
             <User />
           </el-icon>
-          <el-input v-model="input.userName" placeholder="請輸入使用者名稱" />
-        </div>
-        <div class="input_item">
-          <el-icon :size="size" :color="color">
+          <el-input v-model="form.userName" placeholder="請輸入使用者名稱" />
+        </el-form-item>
+        <el-form-item class="input_item" prop="userPassword">
+          <el-icon>
             <Setting />
           </el-icon>
           <el-input
-            v-model="input.userPassword"
+            v-model="form.userPassword"
             type="password"
             placeholder="請輸入密碼"
             show-password
           />
-        </div>
-        <el-button type="primary" >送出</el-button></el-form
-      >
+        </el-form-item>
+        <el-button type="primary" @click="handleLogin">送出</el-button>
+      </el-form>
     </div>
   </div>
 </template>
