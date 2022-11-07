@@ -11,13 +11,13 @@ const input = ref({
     <div class="login_container">
       <h3 class="page_title">login</h3>
       <el-form :model="form" label-width="120px">
-        <el-form-item label="使用者名稱" class="input_item">
+        <div class="input_item">
           <el-icon :size="size" :color="color">
             <User />
           </el-icon>
           <el-input v-model="input.userName" placeholder="請輸入使用者名稱" />
-        </el-form-item>
-        <el-form-item label="使用者密碼" class="input_item">
+        </div>
+        <div class="input_item">
           <el-icon :size="size" :color="color">
             <Setting />
           </el-icon>
@@ -27,7 +27,7 @@ const input = ref({
             placeholder="請輸入密碼"
             show-password
           />
-        </el-form-item>
+        </div>
         <el-button type="primary" round>送出</el-button></el-form
       >
     </div>
@@ -48,12 +48,11 @@ const input = ref({
   margin: auto;
   display: flex;
   flex-direction: column;
-
 }
 .page_title {
   text-align: center;
   font-size: clamp(24px, 2vw, 40px);
-  margin-bottom: clamp(10px, 1.5vw,30px);
+  margin-bottom: clamp(10px, 1.5vw, 30px);
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
@@ -61,6 +60,8 @@ const input = ref({
 .input_item {
   display: flex;
   position: relative;
+  margin-bottom: 14px;
+
   .el-form-item__label {
     color: #fff;
     font-size: clamp(18px, 1.15vw, 24px);
@@ -73,6 +74,10 @@ const input = ref({
     font-size: clamp(18px, 1.5vw, 28px);
     z-index: 1;
     color: #999;
+    &.el-input__password {
+      left: unset;
+      right: 0;
+    }
   }
   .el-input__inner {
     text-indent: 24px;
