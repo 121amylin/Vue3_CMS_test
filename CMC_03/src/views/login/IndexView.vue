@@ -1,7 +1,8 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import { login } from "../../api/login";
 import { Setting, User } from "@element-plus/icons-vue";
+import axios from "axios";
 const form = ref({
   userName: "",
   userPassword: "",
@@ -16,15 +17,37 @@ const handleLogin = () => {
   formRef.value.validate(async (valid) => {
     if (valid) {
       // alert("submit!");
-      await login(form.value)
+      // await login(form.value);
+      // 沒有登入接口，用 OPEN API 代替
+      await axios
+        .get("https://jsonplaceholder.typicode.com/posts/1")
+        .then((res) => {
+          console.log(res);
+        });
     } else {
       console.log("error submit!!");
       return false;
     }
   });
 };
-// https://element.eleme.io/#/zh-CN/component/form#biao-dan-yan-zheng
 
+onMounted(() => {
+  // axios.get("https://jsonplaceholder.typicode.com/posts/1").then((res) => {
+  //   console.log(res);
+  // });
+  // 代理測試
+  // axios
+  //   .get(
+  //     "path/api/mmdb/movie/v3/list/hot.json?ct=%E5%8C%97%E4%BA%AC&ci=1&channelId=4"
+  //   )
+  //   .then((res) => {
+  //     console.log(res);
+  //   });
+});
+
+// https://i.maoyan.com/api/mmdb/movie/v3/list/hot.json?ct=%E5%8C%97%E4%BA%AC&ci=1&channelId=4
+
+// https://element.eleme.io/#/zh-CN/component/form#biao-dan-yan-zheng
 </script>
 <template>
   <div class="login_page">
@@ -89,7 +112,7 @@ const handleLogin = () => {
   }
   .el-icon {
     position: absolute;
-    top: 6px;
+    // top: 6px;
     left: 8px;
     font-size: clamp(18px, 1.5vw, 28px);
     z-index: 1;
@@ -100,7 +123,7 @@ const handleLogin = () => {
     }
   }
   .el-input__inner {
-    text-indent: 24px;
+    text-indent: 32px;
     // &::placeholder {
     //   text-indent: 24px;
     // }

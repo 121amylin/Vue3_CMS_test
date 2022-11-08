@@ -34,19 +34,31 @@ export default defineConfig({
   //     },
   //   },
   // },
-
-  devServer: {
-    https: false,
-    hotOnly: false,
+  // devServer
+  server: {
+    // https: false,
+    // hotOnly: false,
+    // proxy: {
+    //   "/api": {
+    //     // target: "https://lianghj.top:8888/api/private/v1/",
+    //     target: "http://120.78.137.246:8888/api/private/v1/",
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       "^/api": "",
+    //     },
+    //   },
+    // },
     proxy: {
-      "/api": {
+      "/path": {
         // target: "https://lianghj.top:8888/api/private/v1/",
-        target: "http://120.78.137.246:8888/api/private/v1/",
+        target: "https://i.maoyan.com",
         changeOrigin: true,
-        pathRewrite: {
-          "^/api": "",
-        },
+        // pathRewrite: {
+        //   "^/path": "",
+        // },
+        rewrite: (path) => path.replace(/^\/path/),
       },
+
     },
   },
 });
