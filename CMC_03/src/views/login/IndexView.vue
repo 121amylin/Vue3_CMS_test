@@ -18,12 +18,13 @@ const handleLogin = () => {
     if (valid) {
       // alert("submit!");
       // await login(form.value);
+      await login();
       // 沒有登入接口，用 OPEN API 代替
-      await axios
-        .get("https://jsonplaceholder.typicode.com/posts/1")
-        .then((res) => {
-          console.log(res);
-        });
+      // await axios
+      //   .get("https://jsonplaceholder.typicode.com/posts/1")
+      //   .then((res) => {
+      //     console.log(res);
+      //   });
     } else {
       console.log("error submit!!");
       return false;
