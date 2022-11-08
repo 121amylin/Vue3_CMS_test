@@ -46,6 +46,10 @@
 ---
 ### 緩竟變量設置與 貓眼電影 proxy 代理測試
 https://www.cnblogs.com/Nyan-Workflow-FC/p/16312863.html
+
+- [DAY06 - API 串接常見問題 - CORS - 解決 CORS 問題篇](https://ithelp.ithome.com.tw/articles/10268821?sc=rss.iron)
+- [MDN 跨來源資源共用（CORS）](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CORS)
+
 ---
 
 ---
