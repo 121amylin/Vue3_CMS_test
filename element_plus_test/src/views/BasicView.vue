@@ -26,8 +26,8 @@ const buttons = [
 <template>
   <div class="BasicView">
     <div class="unit_btn_box">
-      <a href="#btn">按鈕</a>
-      <a href="#border">邊框</a>
+      <a href="#btn">按鈕 筆記</a>
+      <a href="#border">邊框 筆記</a>
       <a href="https://element-plus.org/zh-CN/component/color.html" target="_blank">色彩</a>
       <a href="https://element-plus.org/zh-CN/component/container.html" target="_blank">Container 布局容器</a>
       <a href="https://element-plus.org/zh-CN/component/icon.html" target="_blank">Icon 圖標</a>
@@ -36,6 +36,8 @@ const buttons = [
       <a href="#layout">Layout 布局 筆記</a>
       <a href="#Link">Link 布局 筆記</a>
       <a href="#Scrollbar">Scrollbar 滚动条 筆記</a>
+      <a href="#space">Space 间距 筆記</a>
+      <a href="https://element-plus.org/zh-CN/component/typography.html" target="_blank">Typography 排版</a>
     </div>
     <hr>
     <!-- 按鈕 -->
@@ -233,6 +235,7 @@ const buttons = [
       <p>class="line"， 搭配 class style => border-top: 1px solid var(--el-border-color)</p>
       <p>class="dashed"， 搭配 class style => border-top: 2px dashed var(--el-border-color)</p>
       <p>var(--el-border-color)</p>
+      <p>autoInsertSpace 屬性，自動留白</p>
       <div class="line" style="width: 200px; height: 40px;"></div>
       <div class="dashed" style="width: 200px; height: 40px;"></div>
       <hr>
@@ -374,6 +377,26 @@ const buttons = [
         </el-icon>
       </el-link>
     </div>
+
+    <hr>
+    <!-- Space 间距  筆記 -->
+    <div id="space">
+      <h1>Space 间距 筆記</h1>
+      <p><a class="link" href="https://element-plus.org/zh-CN/component/space.html" target="_blank">官網</a></p>
+      <p>el-space 組件</p>
+      <p class="mb_0">屬性：</p>
+      <ol>
+        <li>wrap(自動換行)</li>
+        <li>direction="vertical"(垂直布局)</li>
+        <li>spacer="|"(自定義分隔元素，分隔符还可以是 VNode 类型)</li>
+        <li>alignment (对齐方式)</li>
+        <li>fill (填充容器) flex-grow: 1; min-width: 100%;</li>
+        <li>fillRatio (填充比例) flex-grow: 1; min-width: 100%;</li>
+      </ol>
+      <p>通过调整 :size 的值来控制间距的大小</p>
+      <p>使用内置的 small、default、large 来设置间距大小，分别对应 8px、12px 和 16px 的间距。 默认的间距大小为 small，也就是 8px。</p>
+      <p>direction: horizontal | vertical (方向屬性)</p>
+    </div>
   </div>
 
 </template>
@@ -382,6 +405,10 @@ const buttons = [
 .BasicView {
   margin-bottom: 80px;
 
+}
+
+.mb_0 {
+  margin-bottom: 0;
 }
 
 p {
