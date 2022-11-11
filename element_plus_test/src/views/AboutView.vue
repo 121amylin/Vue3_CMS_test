@@ -1,126 +1,102 @@
-<!-- <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
-</template>
-
-<style lang="scss" scoped>
-
-</style> -->
-<template>
-  <div class="example-block">
-    <span class="example-demonstration">Display all tags (default)</span>
-    <el-cascader :options="options" :props="props" clearable />
-  </div>
-
-  <div class="example-block">
-    <span class="example-demonstration">Collapse tags tooltip</span>
-    <el-cascader :options="options" :props="props" collapse-tags collapse-tags-tooltip clearable />
-  </div>
-
-  <div class="example-block">
-    <span class="example-demonstration">Collapse tags</span>
-    <el-cascader :options="options" :props="props" collapse-tags clearable />
-  </div>
-
-
-
-</template>
-
-<script  setup>
-const props = { multiple: true }
-
-const options = [
-  {
-    value: 1,
-    label: 'Asia',
-    children: [
-      {
-        value: 2,
-        label: 'China',
-        children: [
-          { value: 3, label: 'Beijing' },
-          { value: 4, label: 'Shanghai' },
-          { value: 5, label: 'Hangzhou' },
-        ],
-      },
-      {
-        value: 6,
-        label: 'Japan',
-        children: [
-          { value: 7, label: 'Tokyo' },
-          { value: 8, label: 'Osaka' },
-          { value: 9, label: 'Kyoto' },
-        ],
-      },
-      {
-        value: 10,
-        label: 'Korea',
-        children: [
-          { value: 11, label: 'Seoul' },
-          { value: 12, label: 'Busan' },
-          { value: 13, label: 'Taegu' },
-        ],
-      },
-    ],
-  },
-  {
-    value: 14,
-    label: 'Europe',
-    children: [
-      {
-        value: 15,
-        label: 'France',
-        children: [
-          { value: 16, label: 'Paris' },
-          { value: 17, label: 'Marseille' },
-          { value: 18, label: 'Lyon' },
-        ],
-      },
-      {
-        value: 19,
-        label: 'UK',
-        children: [
-          { value: 20, label: 'London' },
-          { value: 21, label: 'Birmingham' },
-          { value: 22, label: 'Manchester' },
-        ],
-      },
-    ],
-  },
-  {
-    value: 23,
-    label: 'North America',
-    children: [
-      {
-        value: 24,
-        label: 'US',
-        children: [
-          { value: 25, label: 'New York' },
-          { value: 26, label: 'Los Angeles' },
-          { value: 27, label: 'Washington' },
-        ],
-      },
-      {
-        value: 28,
-        label: 'Canada',
-        children: [
-          { value: 29, label: 'Toronto' },
-          { value: 30, label: 'Montreal' },
-          { value: 31, label: 'Ottawa' },
-        ],
-      },
-    ],
-  },
-]
+<script setup>
+import { ArrowRight } from '@element-plus/icons-vue'
 </script>
 
-<style scoped>
-.example-block {
-  margin: 1rem;
-}
 
-.example-demonstration {
-  margin: 1rem;
-}
+<template>
+  <!-- <el-skeleton />
+  <br /> -->
+
+
+  <!-- <el-skeleton style="--el-skeleton-circle-size: 100px">
+    <template #template>
+      <el-skeleton-item />
+      <el-skeleton-item />
+      <el-skeleton-item variant="circle" />
+
+      <el-skeleton-item variant="p" style="width: 50%" />
+      <div style="
+            display: flex;
+            align-items: center;
+            justify-items: space-between;
+          ">
+        <el-skeleton-item variant="text" style="margin-right: 16px" />
+        <el-skeleton-item variant="text" style="width: 30%" />
+        </div>
+    </template>
+  </el-skeleton> -->
+
+  <!-- <el-breadcrumb separator="->"> -->
+  <el-breadcrumb :separator-icon="ArrowRight">
+    <el-breadcrumb-item>homepage</el-breadcrumb-item>
+    <el-breadcrumb-item
+      ><a href="#">promotion management</a></el-breadcrumb-item
+    >
+    <el-breadcrumb-item>promotion list</el-breadcrumb-item>
+    <el-breadcrumb-item>promotion detail</el-breadcrumb-item>
+  </el-breadcrumb>
+
+
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+
+
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+
+
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+
+  <el-backtop :right="30" :bottom="30" />
+
+  <el-backtop :bottom="100">
+    <div
+      style="
+        height: 100%;
+        width: 100%;
+        background-color: var(--el-bg-color-overlay);
+        box-shadow: var(--el-box-shadow-lighter);
+        text-align: center;
+        line-height: 40px;
+        color: #1989fa;
+      "
+    >
+      UP
+    </div>
+  </el-backtop>
+</template>
+
+
+<!-- <template>
+  <el-skeleton :rows="2" animated  />
+</template> -->
+
+
+<style scoped lang='scss'>
+
 </style>
