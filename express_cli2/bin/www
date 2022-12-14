@@ -4,10 +4,10 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require('../app'); // 引入 app.js 檔案
 var debug = require('debug')('express-cli2:server');
 var http = require('http');
-
+// 引入套件，這兩個套件可以直接到npm網站查詢文件
 /**
  * Get port from environment and store in Express.
  */
