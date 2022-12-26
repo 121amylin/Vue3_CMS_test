@@ -1,0 +1,15 @@
+// 命名空间
+@forward 'element-plus/theme-chalk/src/mixins/config.scss' with (
+  $namespace: 'el'
+);
+
+/* 只需要重写你需要的即可 */
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    //'primary': (
+    //  'base': green,
+    //),
+  ),
+);
+// 导入scss基础变量文件，这里是核心，通过该导入解决scss变量没有导入的问题
+@import "element-plus/theme-chalk/src/base.scss";
