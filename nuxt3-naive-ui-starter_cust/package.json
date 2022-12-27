@@ -9,6 +9,8 @@
   "devDependencies": {
     "naive-ui": "^2.31.0",
     "nuxt": "npm:nuxt3@latest",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
     "unplugin-vue-components": "^0.21.1"
   }
 }

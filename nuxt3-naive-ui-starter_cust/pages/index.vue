@@ -1,11 +1,12 @@
-<!--  -->
 <script setup>
 </script>
 
 
 <template>
     <div>
-        <h1>home</h1>
+        <headerComponent></headerComponent>
+        <main class="main">index</main>
+        <menuComponents></menuComponents>
     </div>
 </template>
 
