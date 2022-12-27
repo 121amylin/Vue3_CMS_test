@@ -19,13 +19,20 @@ body {
   box-sizing: border-box;
   font-family: 'Noto Sans TC', sans-serif;
 }
-
+body.el-popup-parent--hidden{
+  .main {
+    z-index: 1;
+  }
+}
 .container {
   margin: auto;
   max-width: 1240px;
   padding: 0 20px;
 }
-.main{
-  padding-top: 80px;
+
+.main {
+  top: 80px;
+  position: relative;
+  z-index: 999;
 }
 </style>
