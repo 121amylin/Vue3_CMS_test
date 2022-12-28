@@ -15,6 +15,8 @@ const rules = {
         { required: true, message: '請輸入密碼', trigger: 'blur' }
     ],
 }
+const { dada } = await useFetch('/api/login')
+console.log(dada)
 
 const submitForm = () => {
     ruleFormRef.value.validate((valid) => {
