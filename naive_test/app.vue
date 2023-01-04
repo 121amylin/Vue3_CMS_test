@@ -5,6 +5,7 @@
         <NuxtLink to="/">home</NuxtLink>
         <NuxtLink to="/Validate">Validate</NuxtLink>
         <NuxtLink to="/Avatar">Avatar</NuxtLink>
+        <NuxtLink to="/CustButton">cust Button</NuxtLink>
       </div>
     </header>
     <main class="main">
@@ -58,5 +59,11 @@ body {
 .container {
   max-width: 1280px;
   margin: auto;
+}
+
+.n-button {
+  ::v-deep(.n-button__content) {
+    --n-color-pressed: #000;
+  }
 }
 </style>
