@@ -8,6 +8,7 @@
         <NuxtLink to="/CustButton">cust Button</NuxtLink>
         <NuxtLink to="/CustButton2">cust Button2</NuxtLink>
         <NuxtLink to="/AssetsTest">AssetsTest</NuxtLink>
+        <NuxtLink to="/Table">Table</NuxtLink>
       </div>
     </header>
     <main class="main">

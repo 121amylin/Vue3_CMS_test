@@ -1,0 +1,28 @@
+.n-data-table {
+    .n-data-table-thead {
+        background-color: #999;
+    }
+    .n-data-table-th {
+        background-color: #666;
+        color: #fff;
+        text-align: center;
+        font-weight: 700;
+    }
+    .n-data-table-tr {
+        &:hover {
+            cursor: pointer;
+            .n-data-table-td {
+                &:first-child {
+                    background-color: #9e9e9e;
+                }
+            }
+        }
+        .n-data-table-td {
+            &:first-child {
+                background-color: #aaa;
+                text-align: center;
+                font-weight: 700;
+            }
+        }
+    }
+}

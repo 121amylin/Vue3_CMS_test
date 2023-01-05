@@ -1,8 +1,2 @@
-.n-button--info-type {
-    background-color: #999;
-}
-.n-button {
-    .n-button__border {
-        border-color: inherit;
-    }
-}
+@import './naive_button';
+@import './naive_table'
