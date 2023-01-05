@@ -1,54 +1,49 @@
 <script setup>
+const AppConfig = useAppConfig()
+const { theme } = AppConfig
+const { primaryColor } = theme
+const primaryColor_ref = ref(AppConfig.theme.primaryColor)
+const changColor = () => {
+    if (!AppConfig.theme.darkMode) {
+        console.log(1)
+        AppConfig.theme.primaryColor = "#222"
+    } else {
+        console.log(2)
+        AppConfig.theme.primaryColor = "#3b82f6"
+    }
+    theme.darkMode = !theme.darkMode
+}
 </script>
 
 
 <template>
-    <n-space>
-        <n-button>Default</n-button>
-        <n-button type="tertiary">
-            Tertiary
+    <div>
+        <h1>首頁</h1>
+        <p>深色主題：{{ theme.darkMode }}</p>
+        <p>主題顏色(動態綁定)：<span class="color" :style="{ backgroundColor: AppConfig.theme.primaryColor }"></span></p>
+        <p>主題顏色(直接解構，不用ref包一層，反正也不連動)：<span class="color"></span></p>
+        {{ primaryColor }}，解構出來的不連動
+        <br>
+        {{ primaryColor_ref }}
+        <br>
+        {{ theme.primaryColor }}
+        <br>
+        {{ AppConfig.theme.primaryColor }}
+        <n-button type="success" @click="changColor">
+            更改主題顏色
         </n-button>
-        <n-button type="primary">
-            Primary
-        </n-button>
-        <n-button type="info">
-            Info
-        </n-button>
-        <n-button type="success">
-            Success
-        </n-button>
-        <n-button type="warning">
-            Warning
-        </n-button>
-        <n-button type="error">
-            Error
-        </n-button>
-
-        <n-space>
-            <n-tag> 爱在西元前 </n-tag>
-            <n-tag type="success">
-                不该
-            </n-tag>
-            <n-tag type="warning">
-                超人不会飞
-            </n-tag>
-            <n-tag type="error">
-                手写的从前
-            </n-tag>
-            <n-tag type="info">
-                哪里都是你
-            </n-tag>
-        </n-space>
-
-        <n-result status="404" title="404 资源不存在" description="生活总归带点荒谬">
-    <template #footer>
-      <n-button>找点乐子吧</n-button>
-    </template>
-  </n-result>
-    </n-space>
+    </div>
 </template>
 
 
 <style scoped lang='scss'>
+.color {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
 
+    background-color: v-bind(primaryColor);
+    // background-color: v-bind(primaryColor_ref);
+    vertical-align: middle;
+}
 </style>
