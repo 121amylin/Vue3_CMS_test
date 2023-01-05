@@ -11,6 +11,7 @@
         <NuxtLink to="/Table">Table</NuxtLink>
         <NuxtLink to="/Message">Message</NuxtLink>
         <NuxtLink to="/API">API</NuxtLink>
+        <NuxtLink to="/Other">Other</NuxtLink>
       </div>
     </header>
     <main class="main">
