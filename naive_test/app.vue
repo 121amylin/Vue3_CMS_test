@@ -10,6 +10,7 @@
         <NuxtLink to="/AssetsTest">AssetsTest</NuxtLink>
         <NuxtLink to="/Table">Table</NuxtLink>
         <NuxtLink to="/Message">Message</NuxtLink>
+        <NuxtLink to="/API">API</NuxtLink>
       </div>
     </header>
     <main class="main">
