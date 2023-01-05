@@ -33,7 +33,7 @@ body {
 .header {
   background-color: #eee;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  position: fixed;
+  // position: fixed;
   width: 100%;
   top: 0;
   left: 0;
@@ -55,12 +55,11 @@ body {
 }
 
 .main {
-  margin-top: 80px;
+  padding: 40px 30px;
 }
 
 .container {
   max-width: 1280px;
   margin: auto;
 }
-
 </style>
