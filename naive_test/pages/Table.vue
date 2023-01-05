@@ -1,6 +1,6 @@
 <script setup>
-import { h, defineComponent } from "vue";
 import { NButton, useMessage } from "naive-ui";
+const message = useMessage();
 // const message = useMessage()
 const createColumns = ({
     play
@@ -48,9 +48,8 @@ const data = [
 
 const columns = createColumns({
     play(row) {
-        // useMessage().info(`Play ${row.title}`)
         console.log(`${row.title}`)
-        // message.info(`Play ${row.title}`);
+        message.info(`Play ${row.title}`);
     }
 })
 </script>
@@ -58,7 +57,7 @@ const columns = createColumns({
 
 <template>
     <div>
-        <n-data-table :columns="columns" :data="data" :bordered="false" striped  />
+        <n-data-table :columns="columns" :data="data" :bordered="false" striped />
     </div>
 </template>
 

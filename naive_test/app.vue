@@ -9,11 +9,14 @@
         <NuxtLink to="/CustButton2">cust Button2</NuxtLink>
         <NuxtLink to="/AssetsTest">AssetsTest</NuxtLink>
         <NuxtLink to="/Table">Table</NuxtLink>
+        <NuxtLink to="/Message">Message</NuxtLink>
       </div>
     </header>
     <main class="main">
       <div class="container">
-        <NuxtPage />
+        <n-message-provider>
+          <NuxtPage />
+        </n-message-provider>
       </div>
     </main>
   </div>
