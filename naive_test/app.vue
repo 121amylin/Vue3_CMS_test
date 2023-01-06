@@ -3,6 +3,7 @@
     <header class="header">
       <div class="container">
         <NuxtLink to="/">home</NuxtLink>
+        <NuxtLink to="/Router">Router</NuxtLink>
         <NuxtLink to="/Validate">Validate</NuxtLink>
         <NuxtLink to="/Avatar">Avatar</NuxtLink>
         <NuxtLink to="/CustButton">cust Button</NuxtLink>
@@ -12,6 +13,8 @@
         <NuxtLink to="/Message">Message</NuxtLink>
         <NuxtLink to="/API">API</NuxtLink>
         <NuxtLink to="/Collapse">Collapse</NuxtLink>
+        <NuxtLink to="/Dropdown">Dropdown</NuxtLink>
+        
         <NuxtLink to="/Other">Other</NuxtLink>
       </div>
     </header>

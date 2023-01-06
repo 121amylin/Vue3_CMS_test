@@ -28,6 +28,12 @@ posts.value = await useFetch('/posts', {
         <br>
         <br>
         <p>{{ posts }}</p>
+
+        <hr>
+        <br><br><br>
+        <APIComponents></APIComponents>
+
+        <TestComponents></TestComponents>
     </div>
 </template>
 
