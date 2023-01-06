@@ -13,5 +13,8 @@
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
     "vfonts": "^0.0.3"
+  },
+  "dependencies": {
+    "@vicons/ionicons5": "^0.12.0"
   }
 }
