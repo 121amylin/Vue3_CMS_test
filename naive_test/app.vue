@@ -18,8 +18,8 @@
         <NuxtLink to="/Other">Other</NuxtLink>
         <NuxtLink to="/PageHeader">Page Header</NuxtLink>
         <NuxtLink to="/Router">Router</NuxtLink>
-        <NuxtLink to="/Radio ">Radio </NuxtLink>
-        <NuxtLink to="/Rate ">Rate </NuxtLink>
+        <NuxtLink to="/Radio">Radio </NuxtLink>
+        <NuxtLink to="/Rate">Rate </NuxtLink>
         <NuxtLink to="/Switch">Switch</NuxtLink>
         <NuxtLink to="/Table">Table</NuxtLink>
         <NuxtLink to="/Tag">Tag</NuxtLink>
