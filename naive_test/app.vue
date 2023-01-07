@@ -11,8 +11,8 @@ const themeOverrides = {
   common: {
     primaryColor: '#FF0000',
     successColor: "red",
-    lineHeight:2,
-    fontSizeMedium:'20px'
+    lineHeight: 2,
+    fontSizeMedium: '20px'
   },
   Button: {
     textColor: 'red',
@@ -61,18 +61,26 @@ const theme = ref(null)
         <NuxtLink to="/Typography">Typography</NuxtLink>
         <NuxtLink to="/Validate">Validate</NuxtLink>
         <p>配置組件</p>
+        <NuxtLink to="/ConfigProvider">ConfigProvider</NuxtLink>
         <NuxtLink to="/Element">Element</NuxtLink>
+        <NuxtLink to="/">全局样式 Global Style(看首頁APP.vue)</NuxtLink>
+        <p>工具組件</p>
+        <NuxtLink to="/CollapseTransition">折疊漸變 Collapse Transition</NuxtLink>
+        <NuxtLink to="/DiscreteAPI">脫離上下文的 API</NuxtLink>
+        <NuxtLink to="/Scrollbar">滾動條Scrollbar</NuxtLink>
 
       </div>
     </header>
     <main class="main">
       <div class="container">
         <!-- <n-config-provider :theme="theme"> -->
-          <n-config-provider :theme="theme" :theme-overrides="themeOverrides">
+        <n-config-provider :theme="theme" :theme-overrides="themeOverrides">
           <n-global-style />
           <n-message-provider>
             <NuxtPage />
           </n-message-provider>
+          <n-divider />
+          <n-divider title-placement="left">全局樣式配置</n-divider>
           <n-card>
             <n-space>
 
