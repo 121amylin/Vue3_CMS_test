@@ -1,3 +1,34 @@
+<script setup>
+import { darkTheme } from "naive-ui";
+// import { NConfigProvider } from 'naive-ui'
+/**
+ * https://www.naiveui.com/zh-CN/os-theme/docs/customize-theme
+ * https://www.naiveui.com/zh-CN/os-theme
+  * js 文件下使用这个做类型提示
+  * @type import('naive-ui').GlobalThemeOverrides
+  */
+const themeOverrides = {
+  common: {
+    primaryColor: '#FF0000',
+    successColor: "red",
+    lineHeight:2,
+    fontSizeMedium:'20px'
+  },
+  Button: {
+    textColor: 'red',
+    fontSizeMedium: '20px'
+  },
+  Select: {
+    peers: {
+      InternalSelection: {
+        textColor: '#FF0000'
+      }
+    }
+  }
+  // ...
+}
+const theme = ref(null)
+</script>
 <template>
   <div class="wapper">
     <header class="header">
@@ -18,7 +49,6 @@
         <NuxtLink to="/DropdownBatch">DropdownBatch</NuxtLink>
         <NuxtLink to="/DropdownContent">DropdownContent</NuxtLink>
         <NuxtLink to="/DropdownTooltip">DropdownTooltip</NuxtLink>
-
         <NuxtLink to="/Message">Message</NuxtLink>
         <NuxtLink to="/Other">Other</NuxtLink>
         <NuxtLink to="/PageHeader">Page Header</NuxtLink>
@@ -30,15 +60,34 @@
         <NuxtLink to="/Tag">Tag</NuxtLink>
         <NuxtLink to="/Typography">Typography</NuxtLink>
         <NuxtLink to="/Validate">Validate</NuxtLink>
-
+        <p>配置組件</p>
+        <NuxtLink to="/Element">Element</NuxtLink>
 
       </div>
     </header>
     <main class="main">
       <div class="container">
-        <n-message-provider>
-          <NuxtPage />
-        </n-message-provider>
+        <!-- <n-config-provider :theme="theme"> -->
+          <n-config-provider :theme="theme" :theme-overrides="themeOverrides">
+          <n-global-style />
+          <n-message-provider>
+            <NuxtPage />
+          </n-message-provider>
+          <n-card>
+            <n-space>
+
+              <n-button @click="theme = darkTheme">
+                深色
+              </n-button>
+              <n-button @click="theme = themeOverrides">
+                客製
+              </n-button>
+              <n-button @click="theme = null">
+                浅色
+              </n-button>
+            </n-space>
+          </n-card>
+        </n-config-provider>
       </div>
     </main>
   </div>
