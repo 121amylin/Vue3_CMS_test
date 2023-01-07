@@ -14,6 +14,11 @@
         <NuxtLink to="/ColorPicker">Color Picker </NuxtLink>
         <NuxtLink to="/Checkbox">Checkbox </NuxtLink>
         <NuxtLink to="/Dropdown">Dropdown</NuxtLink>
+        <NuxtLink to="/DropdownIcon">DropdownIcon</NuxtLink>
+        <NuxtLink to="/DropdownBatch">DropdownBatch</NuxtLink>
+        <NuxtLink to="/DropdownContent">DropdownContent</NuxtLink>
+        <NuxtLink to="/DropdownTooltip">DropdownTooltip</NuxtLink>
+
         <NuxtLink to="/Message">Message</NuxtLink>
         <NuxtLink to="/Other">Other</NuxtLink>
         <NuxtLink to="/PageHeader">Page Header</NuxtLink>
