@@ -1,3 +1,34 @@
+<script setup>
+import { darkTheme } from "naive-ui";
+// import { NConfigProvider } from 'naive-ui'
+/**
+ * https://www.naiveui.com/zh-CN/os-theme/docs/customize-theme
+ * https://www.naiveui.com/zh-CN/os-theme
+  * js 文件下使用这个做类型提示
+  * @type import('naive-ui').GlobalThemeOverrides
+  */
+const themeOverrides = {
+  common: {
+    primaryColor: '#FF0000',
+    successColor: "red",
+    lineHeight: 2,
+    fontSizeMedium: '20px'
+  },
+  Button: {
+    textColor: 'red',
+    fontSizeMedium: '20px'
+  },
+  Select: {
+    peers: {
+      InternalSelection: {
+        textColor: '#FF0000'
+      }
+    }
+  }
+  // ...
+}
+const theme = ref(null)
+</script>
 <template>
   <div class="wapper">
     <header class="header">
@@ -14,26 +45,68 @@
         <NuxtLink to="/ColorPicker">Color Picker </NuxtLink>
         <NuxtLink to="/Checkbox">Checkbox </NuxtLink>
         <NuxtLink to="/Dropdown">Dropdown</NuxtLink>
+        <NuxtLink to="/DropdownIcon">DropdownIcon</NuxtLink>
+        <NuxtLink to="/DropdownBatch">DropdownBatch</NuxtLink>
+        <NuxtLink to="/DropdownContent">DropdownContent</NuxtLink>
+        <NuxtLink to="/DropdownTooltip">DropdownTooltip</NuxtLink>
         <NuxtLink to="/Message">Message</NuxtLink>
         <NuxtLink to="/Other">Other</NuxtLink>
         <NuxtLink to="/PageHeader">Page Header</NuxtLink>
         <NuxtLink to="/Router">Router</NuxtLink>
-        <NuxtLink to="/Radio ">Radio </NuxtLink>
-        <NuxtLink to="/Rate ">Rate </NuxtLink>
+        <NuxtLink to="/Radio">Radio </NuxtLink>
+        <NuxtLink to="/Rate">Rate </NuxtLink>
         <NuxtLink to="/Switch">Switch</NuxtLink>
         <NuxtLink to="/Table">Table</NuxtLink>
         <NuxtLink to="/Tag">Tag</NuxtLink>
         <NuxtLink to="/Typography">Typography</NuxtLink>
         <NuxtLink to="/Validate">Validate</NuxtLink>
 
+        <p>布局组件</p>
+        <NuxtLink to="/Layout">Layout</NuxtLink>
+        <NuxtLink to="/Grid">Grid</NuxtLink>
+        <NuxtLink to="/Space">Space</NuxtLink>
+
+        <p>配置組件</p>
+        <NuxtLink to="/ConfigProvider">ConfigProvider</NuxtLink>
+        <NuxtLink to="/Element">Element</NuxtLink>
+        <NuxtLink to="/">全局样式 Global Style(看首頁APP.vue)</NuxtLink>
+
+        <p>工具組件</p>
+        <NuxtLink to="/CollapseTransition">折疊漸變 Collapse Transition</NuxtLink>
+        <NuxtLink to="/DiscreteAPI">脫離上下文的 API</NuxtLink>
+        <NuxtLink to="/Scrollbar">滾動條Scrollbar</NuxtLink>
+
+        <p>反饋組件</p>
+        <NuxtLink to="/Alert">警示信息</NuxtLink>
+        
 
       </div>
     </header>
     <main class="main">
       <div class="container">
-        <n-message-provider>
-          <NuxtPage />
-        </n-message-provider>
+        <!-- <n-config-provider :theme="theme"> -->
+        <n-config-provider :theme="theme" :theme-overrides="themeOverrides">
+          <n-global-style />
+          <n-message-provider>
+            <NuxtPage />
+          </n-message-provider>
+          <n-divider />
+          <n-divider title-placement="left">全局樣式配置</n-divider>
+          <n-card>
+            <n-space>
+
+              <n-button @click="theme = darkTheme">
+                深色
+              </n-button>
+              <n-button @click="theme = themeOverrides">
+                客製
+              </n-button>
+              <n-button @click="theme = null">
+                浅色
+              </n-button>
+            </n-space>
+          </n-card>
+        </n-config-provider>
       </div>
     </main>
   </div>
@@ -82,5 +155,21 @@ body {
 .container {
   max-width: 1280px;
   margin: auto;
+}
+
+mark {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 6px;
+}
+
+.code {
+  display: inline-block;
+  padding: 14px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  background-color: #eee;
 }
 </style>
