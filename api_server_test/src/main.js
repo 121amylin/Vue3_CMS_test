@@ -5,7 +5,7 @@ import axios from 'axios'
 import App from './App.vue'
 import router from './router'
 
-import './assets/main.css'
+import './assets/main.scss'
 
 const app = createApp(App)
 
@@ -18,7 +18,7 @@ axios('/api').then(res => {
 
 const aaa = axios('/user').then(res => {
     console.log(JSON.stringify(res.data))
-    document.querySelector('#app').innerHTML = JSON.stringify(res.data)
+    // document.querySelector('#app').innerHTML = JSON.stringify(res.data)
 })
 
 
