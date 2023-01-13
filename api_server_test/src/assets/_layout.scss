@@ -21,3 +21,6 @@ a {
     font-size: clamp(24px, 2vw, 40px);
     padding: 10px;
 }
+.main {
+    padding: clamp(20px, 2vw, 40px) 0;
+}
