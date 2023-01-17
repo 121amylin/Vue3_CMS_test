@@ -9,23 +9,23 @@ import { darkTheme } from "naive-ui";
   */
 
 const themeOverrides = {
-  common: {
-    primaryColor: '#FF0000',
-    successColor: "red",
-    lineHeight: 2,
-    fontSizeMedium: '20px'
-  },
-  Button: {
-    textColor: 'red',
-    fontSizeMedium: '20px'
-  },
-  Select: {
-    peers: {
-      InternalSelection: {
-        textColor: '#FF0000'
-      }
-    }
-  }
+  // common: {
+  //   primaryColor: '#FF0000',
+  //   successColor: "red",
+  //   lineHeight: 2,
+  //   fontSizeMedium: '20px'
+  // },
+  // Button: {
+  //   textColor: 'red',
+  //   fontSizeMedium: '20px'
+  // },
+  // Select: {
+  //   peers: {
+  //     InternalSelection: {
+  //       textColor: '#FF0000'
+  //     }
+  //   }
+  // }
   // ...
 }
 const theme = ref(null)
