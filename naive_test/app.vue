@@ -99,6 +99,7 @@ const theme = ref(null)
           <NuxtLink to="/Badge">標記 Badge</NuxtLink>
           <NuxtLink to="/Dialog">對話框 Dialog</NuxtLink>
           <NuxtLink to="/Drawer">抽屜 Drawer</NuxtLink>
+          <NuxtLink to="/Drawer2">抽屜 Drawer2</NuxtLink>
           <NuxtLink to="/Message">信息 Message</NuxtLink>
           <NuxtLink to="/Modal">模態框 Modal</NuxtLink>
           <NuxtLink to="/Notification">通知 Notification</NuxtLink>
@@ -158,7 +159,9 @@ const theme = ref(null)
           <n-config-provider :theme="theme" :theme-overrides="themeOverrides">
             <n-global-style />
             <n-message-provider>
-              <NuxtPage />
+              <n-dialog-provider>
+                <NuxtPage />
+              </n-dialog-provider>
             </n-message-provider>
             <n-divider />
             <n-divider title-placement="left">全局樣式配置</n-divider>
