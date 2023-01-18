@@ -94,6 +94,61 @@ const theme = ref(null)
           <NuxtLink to="/Pagination">分頁 Pagination</NuxtLink>
           <NuxtLink to="/Steps">步驟 Steps</NuxtLink>
           <NuxtLink to="/Tabs">標籤頁 Tabs</NuxtLink>
+          <!-- ===================================== -->
+          <p>反饋組件</p>
+          <NuxtLink to="/Badge">標記 Badge</NuxtLink>
+          <NuxtLink to="/Dialog">對話框 Dialog</NuxtLink>
+          <NuxtLink to="/Drawer">抽屜 Drawer</NuxtLink>
+          <NuxtLink to="/Message">信息 Message</NuxtLink>
+          <NuxtLink to="/Modal">模態框 Modal</NuxtLink>
+          <NuxtLink to="/Notification">通知 Notification</NuxtLink>
+          <NuxtLink to="/Popconfirm">彈出確認 Popconfirm</NuxtLink>
+          <NuxtLink to="/Popover">彈出信息 Popover</NuxtLink>
+          <NuxtLink to="/Popselect">彈出選擇 Popselect</NuxtLink>
+          <NuxtLink to="/Progress">進度 Progress</NuxtLink>
+          <NuxtLink to="/Result">結果頁 Result</NuxtLink>
+          <NuxtLink to="/Skeleton">骨架屏 Skeleton</NuxtLink>
+          <NuxtLink to="/Spin">加載 Spin</NuxtLink>
+          <NuxtLink to="/Tooltip">彈出提示 Tooltip</NuxtLink>
+
+          <p>數據錄入組件</p>
+
+          <NuxtLink to="/AutoComplete_2">自動填充 Auto Complete</NuxtLink>
+          <NuxtLink to="/Cascader">級聯選擇 Cascader</NuxtLink>
+          <NuxtLink to="/DatePicker">日期選擇器 Date Picker</NuxtLink>
+          <NuxtLink to="/DynamicInput">動態錄入 Dynamic Input</NuxtLink>
+          <NuxtLink to="/DynamicTags">動態標籤 Dynamic Tags</NuxtLink>
+          <NuxtLink to="/Form">表單 Form</NuxtLink>
+          <NuxtLink to="/Input">文本輸入 Input</NuxtLink>
+          <NuxtLink to="/InputNumber">數字輸入 Input Number</NuxtLink>
+          <NuxtLink to="/Mention">提及 Mention</NuxtLink>
+          <NuxtLink to="/Select">選擇器 Select</NuxtLink>
+          <NuxtLink to="/Slider">滑動選擇 Slider</NuxtLink>
+          <NuxtLink to="/TimePicker">時間選擇器 Time Picker</NuxtLink>
+          <NuxtLink to="/Transfer">穿梭框 Transfer</NuxtLink>
+          <NuxtLink to="/TreeSelect">樹型選擇 Tree Select</NuxtLink>
+          <NuxtLink to="/Upload">上傳 Upload</NuxtLink>
+
+
+
+
+          <p>數據展示組件</p>
+          <NuxtLink to="/Calendar">日曆 Calendar</NuxtLink>
+          <NuxtLink to="/Countdown">倒計時 Countdown</NuxtLink>
+          <NuxtLink to="/Code">代碼 Code</NuxtLink>
+          <NuxtLink to="/Descriptions">描述 Descriptions</NuxtLink>
+          <NuxtLink to="/Empty">無內容 Empty</NuxtLink>
+          <NuxtLink to="/Equation">公式 Equation</NuxtLink>
+          <NuxtLink to="/Image">圖像 Image</NuxtLink>
+          <NuxtLink to="/List">列表 List</NuxtLink>
+          <NuxtLink to="/Log">日誌 Log</NuxtLink>
+          <NuxtLink to="/NumberAnimation">數值動畫 Number Animation</NuxtLink>
+          <NuxtLink to="/Statistic">統計數據 Statistic</NuxtLink>
+          <NuxtLink to="/Table_2">表格 Table</NuxtLink>
+          <NuxtLink to="/Thing">東西 Thing</NuxtLink>
+          <NuxtLink to="/Time">時間 Time</NuxtLink>
+          <NuxtLink to="/Timeline">時間線 Timeline</NuxtLink>
+          <NuxtLink to="/Tree">樹 Tree</NuxtLink>
         </div>
       </header>
 
