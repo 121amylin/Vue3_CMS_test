@@ -39,7 +39,7 @@ const theme = ref(null)
           <NuxtLink to="/API">API</NuxtLink>
           <NuxtLink to="/Avatar">Avatar</NuxtLink>
           <NuxtLink to="/AssetsTest">Assets Test</NuxtLink>
-          <NuxtLink to="/AutoComplete">Auto Complete</NuxtLink>
+          <!-- <NuxtLink to="/AutoComplete">Auto Complete</NuxtLink> -->
           <NuxtLink to="/CustButton">cust Button</NuxtLink>
           <NuxtLink to="/CustButton2">cust Button2</NuxtLink>
           <NuxtLink to="/Collapse">Collapse</NuxtLink>
@@ -114,7 +114,7 @@ const theme = ref(null)
 
           <p>數據錄入組件</p>
 
-          <NuxtLink to="/AutoComplete_2">自動填充 Auto Complete</NuxtLink>
+          <NuxtLink to="/AutoComplete">自動填充 Auto Complete</NuxtLink>
           <NuxtLink to="/Cascader">級聯選擇 Cascader</NuxtLink>
           <NuxtLink to="/DatePicker">日期選擇器 Date Picker</NuxtLink>
           <NuxtLink to="/DynamicInput">動態錄入 Dynamic Input</NuxtLink>
