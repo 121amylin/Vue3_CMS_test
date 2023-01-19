@@ -160,7 +160,9 @@ const theme = ref(null)
             <n-global-style />
             <n-message-provider>
               <n-dialog-provider>
-                <NuxtPage />
+                <n-notification-provider>
+                  <NuxtPage />
+                </n-notification-provider>
               </n-dialog-provider>
             </n-message-provider>
             <n-divider />
