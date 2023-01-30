@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <search-input defaultValue="input1"></search-input>
+        <search-input defaultValue="input2"></search-input>
+        <search-input defaultValue="input3"></search-input>
+    </div>
+
+    <script>
+        class SearchInput extends HTMLElement {
+            constructor() {
+                super();
+                this.state = { count: 0 };
+                // 创建一个 shadow root
+                let shadow = this.attachShadow({ mode: 'open' });
+
+                const input = document.createElement('input');
+                input.setAttribute('type', 'text');
+                input.setAttribute('class', 'input-value');
+
+                const button = document.createElement('input');
+                button.setAttribute('type', 'button');
+                button.setAttribute('value', 'Search');
+
+                const text = document.createElement('p');
+
+                // 创建一些 CSS，并应用到 shadow dom上
+                let style = document.createElement('style');
+                style.textContent = ".input-value{margin:5px; color:red;}";
+
+
+                shadow.append(input);
+                shadow.append(button);
+                shadow.append(text);
+                shadow.append(style);
+
+                // 監聽點擊事件
+                button.addEventListener('click', e => {
+                    this.state.count++;
+                    text.textContent = `按钮被点击了${this.state.count}次。`
+                });
+            }
+
+            connectedCallback() {
+                const defaultValue = this.getAttribute('defaultValue');
+                const input = this.shadowRoot.querySelector('.input-value');
+                input.value = defaultValue;
+            }
+        }
+
+        // declare var customElements: CustomElementRegistry;
+        customElements.define('search-input', SearchInput);
+    </script>
+</body>
+
+</html>
+
+<!-- https://juejin.cn/post/6994825290237100046 -->
+
+<!-- sessionStorage || localStorage 的storage事件 -->
+<!-- https://juejin.cn/post/6844903576259543048 -->
+<!-- 当储存的数据发生变化时，会触发storage事件。我们可以指定这个事件的回调函数。 window.addEventListener("storage",function onStorageChange(event) {
+    console.log(event.key);
+}); -->

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <template id="my-paragraph">
+
+    </template>
+    <my-paragraph></my-paragraph>
+    <my-paragraph>
+        <span slot="my-text">个性化文本</span>
+    </my-paragraph>
+
+    <my-paragraph>
+        <ul slot="my-text">
+            <li>列表条目1</li>
+            <li>列表条目2</li>
+        </ul>
+        <p slot="my-con">333</p>
+    </my-paragraph>
+
+    <script>
+        const str = `        
+            <style>
+                p {
+                    color: white;
+                    background-color: #909090;
+                    padding: 5px;
+                    border: 1px soli silver;
+                }
+            </style>
+            <p>
+                <slot name="my-text">默认文本</slot>
+            </p>
+            <p>
+                <slot name="my-con">222</slot>
+            </p>
+        `
+        customElements.define('my-paragraph',
+            class extends HTMLElement {
+                constructor() {
+                    super();
+                    
+                    const template = document.createElement('template');
+                    template.innerHTML = str;
+                    const templateContent = template.content;
+
+                    this.attachShadow({ mode: 'open' }).appendChild(
+                        templateContent.cloneNode(true)
+                    );
+                }
+            }
+        );
+
+    </script>
+</body>
+
+</html>
+
+<!-- https://juejin.cn/post/6994825290237100046 -->
+
+<!-- sessionStorage || localStorage 的storage事件 -->
+<!-- https://juejin.cn/post/6844903576259543048 -->
+<!-- 当储存的数据发生变化时，会触发storage事件。我们可以指定这个事件的回调函数。 window.addEventListener("storage",function onStorageChange(event) {
+    console.log(event.key);
+}); -->
