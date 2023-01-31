@@ -1,23 +1,70 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+const getAPI = () => {
+  fetch('/api/data').then(res => {
+    return res.json()
+  }).then(res => {
+    console.log(res)
+  })
+}
+const postAPI = async () => {
+  await fetch('/api/login', {
+    method: 'post',
+    //post请求，傳遞JSON數據(一定要設置，不然會傳不到後端)
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    //post请求参数
+    body: JSON.stringify({
+      name: 'admin',
+      login: '123456',
+    })
+  }).then(res => {
+    // return res
+    return res.json()
+  }).then(res => {
+    console.log(res)
+  })
+}
+
+const request = 'https://jsonplaceholder.typicode.com/todos/1';
+
+
+
+// 使用 async & await （Fetch API）
+// https://ithelp.ithome.com.tw/articles/10263449?sc=rss.iron
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <!-- fetch的get和post传参 -->
+  <!-- https://blog.csdn.net/dylan_zeng92/article/details/75371034 -->
+  <div>
+    <header>
+      <div>
+        <button @click="getAPI">getAPI</button>
+        <button @click="postAPI">postAPI</button>
+        <a href="https://muki.tw/tech/vue/vue-express-project/" target="_blank">實作參考</a>
+      </div>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
+      <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
 
-  <RouterView />
+      <div class="wrapper" style="margin-top:50px">
+        <HelloWorld msg="You did it!" />
+
+        <nav>
+          <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/about">About</RouterLink>
+        </nav>
+      </div>
+    </header>
+
+    <RouterView />
+  </div>
+
 </template>
 
 <style scoped>
