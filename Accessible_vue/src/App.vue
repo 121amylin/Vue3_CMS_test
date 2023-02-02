@@ -20,6 +20,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <style scoped>
 header {
+  width: 100%;
   line-height: 1.5;
   max-height: 100vh;
 }
@@ -69,10 +70,10 @@ nav a:first-of-type {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+    width: 100%;
   }
 
   nav {
-    text-align: left;
     margin-left: -1rem;
     font-size: 1rem;
 

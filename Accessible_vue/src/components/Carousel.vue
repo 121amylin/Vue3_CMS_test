@@ -1,54 +1,45 @@
 <script setup>
 
-import { ref } from 'vue'
+import { ref, defineProps } from 'vue'
 // 元件外部接口 ==============================
-const data = [{
-    id: 0,
-    descript: '圖片一',
-    src: "https://picsum.photos/1920/300?random=1",
-    link: 'javascript;:',
-    isShow: false
-}, {
-    id: 1,
-    descript: '圖片二',
-    src: "https://picsum.photos/1920/300?random=2",
-    link: 'javascript;:',
-    isShow: false
-}, {
-    id: 2,
-    descript: '圖片三',
-    src: "https://picsum.photos/1920/300?random=3",
-    link: 'javascript;:',
-    isShow: true
-}, {
-    id: 3,
-    descript: '圖片四',
-    src: "https://picsum.photos/1920/300?random=4",
-    link: 'javascript;:',
-    isShow: true
-}, {
-    id: 4,
-    descript: '圖片五',
-    src: "https://picsum.photos/1920/300?random=5",
-    link: 'javascript;:',
-    isShow: true
-}]
 
-const controller = {
-    autoPlay: true,
-    haveDotBtn: true,
-    haveArror: true,
-}
+const props = defineProps({
+    data: {
+        type: Object,
+        required: true
+    },
+    controller: {
+        type: Object,
+        default() {
+            return {
+                autoPlay: true,
+                haveDotBtn: true,
+                haveArror: true,
+
+            }
+        }
+    }
+})
+
+// const controller = {
+//     autoPlay: true,
+//     haveDotBtn: true,
+//     haveArror: true,
+// }
 
 // 元件內部運作 ==============================
 let showData = []
-data.forEach(item => {
+props.data.forEach(item => {
     if (item.isShow) {
         showData.push(item)
     }
 })
 let nowShowID = ref(0)
 
+const linkHandle = (url) => {
+    console.log(111)
+    window.open(url)
+}
 const cutoverItemHandle = (num, type) => {
     if (type === "arr") {
         if (num === 1) {
@@ -62,14 +53,14 @@ const cutoverItemHandle = (num, type) => {
 }
 
 const autoPlayHandle = () => {
-    if (controller.autoPlay) {
+    if (props.controller.autoPlay) {
         setInterval(() => {
             if (nowShowID.value >= showData.length - 1) {
                 nowShowID.value = 0
             } else {
                 nowShowID.value++
             }
-        }, 5000)
+        }, 50000)
     }
 }
 autoPlayHandle()
@@ -82,19 +73,23 @@ autoPlayHandle()
             <div class="carousel_box" :style="{ height: '300px' }">
                 <div class="carousel_item" v-for="(item, index) in showData" :key="item.id"
                     :class="[index === nowShowID ? 'active' : '']">
-                    <a :href="item.link"><img :src="item.src" alt="">
-                        <p>{{ item.descript }}</p>
-                    </a>
+                    <img :src="item.src" :alt="item.descript">
+                    <div class="link_area" v-if="item.link !== ''" @click.prevent="linkHandle(item.link)"></div>
+                    <p v-if="item.descript" aria-hidden="true">{{ item.descript }}</p>
                 </div>
             </div>
-            <div v-if="controller.haveDotBtn" class="dotBtn_box">
-                <a href="#" @click="cutoverItemHandle(index)" v-for="(item, index) in showData" :key="item.id"></a>
+            <div v-if="props.controller.haveArror" class="arrowBtn_box">
+                <a href="javascript" class="gg-arrow-left" @click.prevent="cutoverItemHandle(-1, 'arr')"
+                    title="前一項"></a>
+                <a href="javascript" class="gg-arrow-right" @click.prevent="cutoverItemHandle(1, 'arr')"
+                    title="後一項"></a>
+            </div>
+            <div v-if="props.controller.haveDotBtn" class="dotBtn_box">
+                <a href="javascript" @click.prevent="cutoverItemHandle(index)" v-for="(item, index) in showData"
+                    :key="item.id" :class="[index === nowShowID ? 'active' : '']"
+                    :title="'第 ' + (index + 1) + ' 項'"></a>
             </div>
 
-            <div v-if="controller.haveArror" class="arrowBtn_box">
-                <a href="#" class="gg-arrow-left" @click="cutoverItemHandle(-1, 'arr')"></a>
-                <a href="#" class="gg-arrow-right" @click="cutoverItemHandle(1, 'arr')"></a>
-            </div>
         </div>
     </div>
 </template>
@@ -110,14 +105,22 @@ autoPlayHandle()
         transform: translateX(-50%);
         bottom: 16px;
         left: 50%;
+        z-index: 10;
 
         a {
+
             display: inline-block;
-            width: clamp(12px, 1vw, 20px);
-            height: clamp(12px, 1vw, 20px);
-            margin: 8px;
-            background-color: aqua;
+            width: clamp(10px, .9vw, 16px);
+            height: clamp(10px, .9vw, 16px);
+            margin: clamp(8px, .8vw, 12px);
             border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 0 6px rgba(0, 0, 0, .8);
+
+            &.active {
+                background-color: hsla(160, 100%, 37%, 1);
+                // border: 3px solid hsla(160, 100%, 37%, 1);
+            }
         }
     }
 
@@ -129,10 +132,10 @@ autoPlayHandle()
         transform: translate(-50%, -50%);
         left: 50%;
         top: 50%;
+        z-index: 20;
     }
+
 }
-
-
 
 .carousel_box {
     display: flex;
@@ -149,6 +152,7 @@ autoPlayHandle()
         &.active {
             opacity: 1;
             transition: opacity 1.5s;
+            z-index: 1;
         }
 
         a {
@@ -166,6 +170,19 @@ autoPlayHandle()
             color: #fff;
             text-shadow: 0 0 20px rgba(0, 0, 0, .6);
             letter-spacing: clamp(10px, 1vw, 20px);
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        .link_area {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            cursor: pointer;
         }
     }
 }
