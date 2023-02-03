@@ -18,6 +18,11 @@ const router = createRouter({
       path: '/carousel',
       name: 'carousel',
       component: () => import('../views/CarouselView.vue')
+    },
+    {
+      path: '/tabs',
+      name: 'tabs',
+      component: () => import('../views/tabsView.vue')
     }
   ]
 })
