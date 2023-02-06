@@ -5,6 +5,7 @@
       <div class="container">
         <NuxtLink to="/">home</NuxtLink>
         <NuxtLink to="/carousel">carousel</NuxtLink>
+        <NuxtLink to="/modal">modal</NuxtLink>
       </div>
     </header>
     <main class="main">

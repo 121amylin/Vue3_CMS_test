@@ -1,5 +1,4 @@
 <script setup>
-import { ref, defineProps } from 'vue'
 const props = defineProps({
     modal_title: {
         type: String
@@ -33,11 +32,12 @@ const changeIsOpenHandle = () => {
                     <div class="gg-close-o"></div>
                 </a>
             </div>
-
         </div>
-
     </div>
 </template>
+
+
+
 
 
 <style scoped lang='scss'>
