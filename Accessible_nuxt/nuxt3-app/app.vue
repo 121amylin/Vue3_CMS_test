@@ -6,6 +6,8 @@
         <NuxtLink to="/">home</NuxtLink>
         <NuxtLink to="/carousel">carousel</NuxtLink>
         <NuxtLink to="/tabs">tabs</NuxtLink>
+        <NuxtLink to="/modal">modal</NuxtLink>
+        <NuxtLink to="/accordion">accordion</NuxtLink>
       </div>
     </header>
     <main class="main">
