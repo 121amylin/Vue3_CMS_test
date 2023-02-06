@@ -23,6 +23,11 @@ const router = createRouter({
       path: '/tabs',
       name: 'tabs',
       component: () => import('../views/tabsView.vue')
+    },
+    {
+      path: '/modal',
+      name: 'modal',
+      component: () => import('../views/ModalView.vue')
     }
   ]
 })
