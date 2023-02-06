@@ -33,6 +33,11 @@ const router = createRouter({
       path: '/accordion',
       name: 'accordion',
       component: () => import('../views/AccordionView.vue')
+    },
+    {
+      path: '/tooltips',
+      name: 'tooltips',
+      component: () => import('../views/TooltipsView.vue')
     }
   ]
 })
