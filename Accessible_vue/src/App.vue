@@ -13,6 +13,7 @@ import { RouterLink, RouterView } from 'vue-router'
           <RouterLink to="/tabs">tabs</RouterLink>
           <RouterLink to="/modal">modal</RouterLink>
           <RouterLink to="/accordion">accordion</RouterLink>
+          <RouterLink to="/tooltips">tooltips</RouterLink>
 
         </nav>
       </div>

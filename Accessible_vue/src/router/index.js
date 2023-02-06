@@ -22,7 +22,7 @@ const router = createRouter({
     {
       path: '/tabs',
       name: 'tabs',
-      component: () => import('../views/tabsView.vue')
+      component: () => import('../views/TabsView.vue')
     },
     {
       path: '/modal',
