@@ -28,6 +28,11 @@ const router = createRouter({
       path: '/modal',
       name: 'modal',
       component: () => import('../views/ModalView.vue')
+    },
+    {
+      path: '/accordion',
+      name: 'accordion',
+      component: () => import('../views/AccordionView.vue')
     }
   ]
 })

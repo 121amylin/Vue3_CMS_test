@@ -12,7 +12,8 @@ import { RouterLink, RouterView } from 'vue-router'
           <RouterLink to="/carousel">Carousel</RouterLink>
           <RouterLink to="/tabs">tabs</RouterLink>
           <RouterLink to="/modal">modal</RouterLink>
-          
+          <RouterLink to="/accordion">accordion</RouterLink>
+
         </nav>
       </div>
     </header>
