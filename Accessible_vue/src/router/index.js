@@ -22,7 +22,22 @@ const router = createRouter({
     {
       path: '/tabs',
       name: 'tabs',
-      component: () => import('../views/tabsView.vue')
+      component: () => import('../views/TabsView.vue')
+    },
+    {
+      path: '/modal',
+      name: 'modal',
+      component: () => import('../views/ModalView.vue')
+    },
+    {
+      path: '/accordion',
+      name: 'accordion',
+      component: () => import('../views/AccordionView.vue')
+    },
+    {
+      path: '/tooltips',
+      name: 'tooltips',
+      component: () => import('../views/TooltipsView.vue')
     }
   ]
 })

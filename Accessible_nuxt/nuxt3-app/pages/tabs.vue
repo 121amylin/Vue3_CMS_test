@@ -1,5 +1,4 @@
 <script setup>
-import Tabs from '../components/Tabs.vue'
 const data = [
     {
         id: 0,
