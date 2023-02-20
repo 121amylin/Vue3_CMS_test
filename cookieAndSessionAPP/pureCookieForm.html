@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>運用純cookie紀錄表單填寫內容</title>
+    <style>
+        .item {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="post">
+        <div class="item">
+            <label for="username">
+                <input class="username" type="text" id="username" placeholder="請輸入使用者名稱">
+            </label>
+        </div>
+        <div class="item">
+            <label for="mail">
+                <input class="mail" type="email" id="mail" placeholder="請輸入回信郵箱">
+            </label>
+        </div>
+        <div class="item">
+            <label for="msg">
+                <textarea class="msg" name="msg" id="msg" cols="30" rows="10" placeholder="請輸入來信訊息"></textarea>
+            </label>
+        </div>
+        <div class="item">
+            <input class="send" type="submit" value="送出">
+        </div>
+    </form>
+    <script>
+        const username = document.querySelector('.username')
+        const mail = document.querySelector('.mail')
+        const msg = document.querySelector('.msg')
+
+        const usernameValue = document.querySelector('.username').value || null
+        const mailValue = document.querySelector('.mail').value || null
+        const msgValue = document.querySelector('.msg').value || null
+
+        // 設置cookie
+        const setMsgCookie = (cname, data, exdays) => {
+
+            // 過期時間搓
+            let d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+
+            // 設置cookie
+            document.cookie = `${cname}=${data};${expires}`
+        }
+
+        // setMsgCookie("username", usernameValue, 1)
+        // setMsgCookie("mail", mailValue, 1)
+        // setMsgCookie("msg", msgValue, 1)
+
+        let cookieData = document.cookie.split('; ')
+        let cookieDataObj = {}
+        cookieData.forEach(item => {
+            let tempArr = item.split('=')
+            cookieDataObj[`${tempArr[0].toString()}`] = tempArr[1]
+        })
+        username.value = cookieDataObj.username || null
+        mail.value = cookieDataObj.mail || null
+        msg.value = cookieDataObj.msg || null
+
+
+        username.addEventListener('change', () => {
+            setMsgCookie("username", document.querySelector('.username').value, 1)
+        })
+
+        mail.addEventListener('change', () => {
+            setMsgCookie("mail", document.querySelector('.mail').value, 1)
+        })
+
+        msg.addEventListener('change', () => {
+            setMsgCookie("msg", document.querySelector('.msg').value, 1)
+        })
+
+        mail.addEventListener('keyup', () => {
+            setMsgCookie("username", document.querySelector('.username').value, 1)
+        })
+
+        username.addEventListener('keyup', () => {
+            setMsgCookie("mail", document.querySelector('.mail').value, 1)
+        })
+
+        msg.addEventListener('keyup', () => {
+            setMsgCookie("msg", document.querySelector('.msg').value, 1)
+        })
+
+    </script>
+</body>
+
+</html>
+
+
+
+<!-- JSON.parse(jsonstr); //可以将json字符串转换成json对象 -->
+<!-- JSON.stringify(jsonobj); //可以将json对象转换成json对符串 -->
+
+
+<!-- 
+const tShirt = {
+    [key]: value,
+    [`${key}Opposite`]: invertColor(value)
+} 
+-->
