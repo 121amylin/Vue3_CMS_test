@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div class="item">
+    <label for="username">
+      帳號：<input type="text" id="username" value="admin">
+    </label>
+  </div>
+  <div class="item">
+    <label for="password">
+      密碼：<input type="password" id="password" value="123">
+    </label>
+  </div>
+  <input type="submit" value="送出" id="submit">
+
+  <script>
+    const username = document.querySelector('#username')
+    const password = document.querySelector('#password')
+    const submit = document.querySelector('#submit')
+
+    submit.addEventListener("click", () => {
+      fetch("/users/success", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: username.value,
+          password: password.value,
+        }),
+      })
+        .then((res) => res.json())
+        .then((res) => {
+          console.log(res);
+          if (res.ok === 1) {
+            location.href = "/";
+          }
+        });
+    });
+  </script>
+</body>
+
+</html>
