@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>用戶登入</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <form action="/users/loginsuccess" method="post" class="login">
+    <div class="item">
+      <label for="username">
+        帳號：<input type="text" name="username" id="username" placeholder="請輸入帳戶" value="admin">
+      </label>
+    </div>
+
+    <div class="item">
+      <label for="password">
+        密碼：<input type="password" name="password" id="password" placeholder="請輸入密碼" value="123">
+      </label>
+    </div>
+
+    <input type="submit">
+  </form>
+</body>
+
+</html>
+
+<!-- - [|D15| JS - `<form>` 表單](https://ithelp.ithome.com.tw/articles/10206661) -->
