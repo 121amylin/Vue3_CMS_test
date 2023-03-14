@@ -102,40 +102,119 @@ css: unocss
 
 ## 3D元素
 
-- <https://i.pinimg.com/originals/01/4d/77/014d7798d46e80c3599aea0970ebdc9e.jpg>
-- <https://i.pinimg.com/564x/87/c3/6f/87c36f9c413837e20ebdd5cd85e28d84.jpg>
+<div class="flex w-screen">
+<div class="p-5">
+  <span>
+    <img src="/04_3D.jpg" class="w-100">
+  </span>
+</div>
+<div class="p-5">
+  <span>
+    <img src="/05_3D.jpg" class="w-100">
+  </span></div>
+</div>
 
 ---
 
 ## 虛擬實境 ( AR 或 VR )
 
-- [線上博物館](https://www.louvre.fr/en/online-tours)
-- [線上博物館](https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/tour-virtuale.html)
+
+<div class="flex w-screen">
+<div class="p-5">
+  <h3 class="mb-2"><a href="https://petitegalerie.louvre.fr/visite-virtuelle/saison6/">線上博物館</a></h3>
+  <span>
+    <img src="/06_3D.png" class="w-100">
+  </span>
+</div>
+<div class="p-5">
+  <h3 class="mb-6"><a href="https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/stanze-di-raffaello/tour-virtuale.html">線上博物館</a></h3>
+  <span>
+    <img src="/07_3D.png" class="w-100">
+  </span></div>
+</div>
 
 ---
 
 ## 情感設計
 
-- [404 頁面](https://i.pinimg.com/564x/1f/d4/b4/1fd4b413c54271eeb8a7896a6fffc8e9.jpg)
-- [口語回應](https://cdn.dribbble.com/users/2431691/screenshots/5687783/media/921d656090dd19c16a0781c2f696a4d2.png)
-- [線上客服](https://www.cathaylife.com.tw/cathaylife/)
+<div class="flex w-screen">
+  <div class="p-5">
+    <h3 class="mb-2">404</h3>
+    <span>
+      <img src="/08_404.jpg" class="w-60">
+    </span>
+  </div>
+  <div class="p-5">
+    <h3 class="mb-2">口語回應</h3>
+    <span>
+      <img src="/09_app.png" class="w-60">
+    </span>
+  </div>
+  <div class="p-5">
+    <h3 class="mb-2">客服助手</h3>
+    <span>
+      <img src="/10_helper.png" class="w-60">
+    </span>
+  </div>
+</div>
 
 ---
 
 ## 深色模式
 
-- youtune
-- github
-- [tumblr](https://www.tumblr.com)
+
+<div class="flex w-screen">
+  <div class="p-5">
+    <h3 class="mb-4">youtune</h3>
+    <span>
+      <img src="/11_yt_d.png" class="w-60">
+    </span>
+  </div>
+  <div class="p-5">
+    <h3 class="mb-4">github</h3>
+    <span>
+      <img src="/12_github_d.png" class="w-60">
+    </span>
+  </div>
+  <div class="p-5">
+    <h3 class="mb-4"><a href="https://www.tumblr.com">tumblr</a></h3>
+    <span>
+      <img src="/13_tumblr_d.png" class="w-60">
+    </span>
+  </div>
+</div>
 
 ---
 
 ## 深度個人化
 
-- Netflix
-- YouTube
-- Amazon
-- Spotify
+
+<div class="flex w-screen">
+  <div class="p-5">
+    <h3 class="mb-4">Netflix</h3>
+    <span>
+      <img src="/14_netflix.jpg" class="w-60">
+    </span>
+  </div>
+  <div class="p-5">
+    <h3 class="mb-4">YouTube</h3>
+    <span>
+      <img src="/15_yt.png" class="w-70">
+    </span>
+  </div>  
+  <div class="p-5">
+    <h3 class="mb-4">Amazon</h3>
+    <span>
+      <img src="/16_Amazon.png" class="w-60">
+    </span>
+  </div>
+</div>
+
+
+
+
+
+
 
 ---
 
@@ -146,24 +225,42 @@ css: unocss
 GA 可以追蹤你的網站訪客在網站上的瀏覽行為，例如停留時間、點擊率、跳出率等等。這些資料可以幫助你評
 估網站頁面的效能，發現並改進網站問題。
 
+<div class="flex w-screen">
+  <div class="p-5">
+    <span>
+      <img src="/18_GA_1.png" class="w-100">
+    </span>
+  </div>
+  <div class="p-5">
+    <span>
+      <img src="/19_GA_1.png" class="w-100">
+    </span>
+  </div>  
+</div>
+
+
 ---
 
 ## 用戶定位分析
 
 GA 可以追蹤你的網站訪客的地理位置和語言偏好，讓你更好地了解你的受眾群體。
+<div class="text-center w-screen"> <img src="/20_GA_2.png" class="w-100 mt-2"></div>
+
 
 ---
 
 ## 用戶設備分析
 
 GA 可以追蹤你的網站訪客的設備類型和操作系統，讓你更好地了解你的訪客使用什麼設備來訪問你的網站。
-
+ <img src="/21_GA_3.png" class="mt-2">
 ---
 
 ## 用戶互動分析
 
 GA 可以追蹤你的網站訪客的互動行為，例如點擊事件、表單提交等等。這些資料可以幫助你了解你的訪客對你
 的網站的興趣和互動方式。
+      <img src="/22_GA_4.png" class="w-150 mt-4">
+<!-- ![Local Image](/22_GA_4.png) -->
 
 1. 新的事件追蹤目標，並給它一個描述性名稱
 2. 在你的網站代碼中插入事件追蹤程式碼， `onclick="ga('send', 'event', '分類', '動作', '標籤');"`
@@ -172,10 +269,10 @@ GA 可以追蹤你的網站訪客的互動行為，例如點擊事件、表單�
 ---
 
 # SEO
-
-1. 符合語意化標籤規範
-2. META 設置
-3. 使用 sitemap.xml
+|     |     |    |
+| --- | --- | --- |
+| 符合語意化標籤規範   |  META 設置   |  使用 sitemap.xml  |
+|   <div class="w-40">![Local Image](/23_website_html5_area.png) </div>  |   <div class="w-80">![Local Image](/24_metadata.jpg)</div>   |   <div class="w-60">![Local Image](/25_sitemap.png)</div> |
 
 <style>
 h1 {
