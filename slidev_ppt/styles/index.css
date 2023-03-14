@@ -4,9 +4,21 @@
   text-align: center;
 }
 .slidev-layout h2 {
-  padding-left: 10px;
+  padding-left: 24px;
   font-weight: 700;
   border-left: 5px solid #60a5fa;
+  border-radius: 50px;
+  position: relative;
+}
+.slidev-layout h2::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #60a5fa;
+  top: calc(50% - 4px);
+  left: 8px;
 }
 
 table tbody tr:nth-child(even) {
@@ -16,10 +28,9 @@ table tbody tr:nth-child(even) {
 p {
   display: inline-block;
   margin-top: 10px;
-  color: #444;
-  background-color: #eff6ff;
-  padding: 4px 12px;
-  border-radius: 4px;
+  -webkit-text-decoration: wavy underline #60a5fa;
+          text-decoration: wavy underline #60a5fa;
+  line-height: 1.5;
 }
 
 img {
