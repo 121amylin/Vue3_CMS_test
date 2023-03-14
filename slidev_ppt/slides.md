@@ -8,6 +8,13 @@ drawings:
   persist: false
 transition: slide-left
 css: unocss
+fonts:
+  # 基础字体
+  sans: 'Noto Sans TC'
+  # 与 windicss 的 `font-serif` css 类一同使用
+  serif: 'Noto Serif TC'
+  # 用于代码块、内联代码等
+  mono: 'Fira Code'
 ---
 
 # 2023介面或視覺設計方向
@@ -19,16 +26,19 @@ css: unocss
 </div>
 
 ---
+layout: image-left
+image: https://source.unsplash.com/collection/94734566/1920x1080
+---
 
 # 大綱
 
 
 |     |     |
 | --- | --- |
-| 1. | 回顧以前分享內容 |
-| 2. | 2023介面趨勢 |
-| 3. | GA4 |
-| 4. | SEO |
+| PART 1 | <Link to="3">回顧分享內容</Link> |
+| PART 2 | <Link to="4">2023介面趨勢</Link> |
+| PART 3 | <Link to="14">GA4</Link> |
+| PART 4 | <Link to="18">SEO</Link> |
 
 
 ---
@@ -47,8 +57,8 @@ css: unocss
 
 # 2023介面趨勢
 
-## UI(使用介面/設計風格)
-
+## UI(介面設計)
+著重的是使用者介面的呈現，如：視覺美感、設計美學、便利性、風格呈現，細節更包含了字型、字體大小、顏色、標誌、按鍵、動畫效果等。
 |     |     |     |
 | --- | --- | --- |
 | 1. 卷軸互動故事 | <span class="bg-blue c-white px-2">2. 資訊圖表 / 資訊視覺化</span> | 3. 極簡風格 |
@@ -57,7 +67,7 @@ css: unocss
 ----
 
 ## UX(使用者操作)
-
+著重用戶使用產品、服務或系統時的整體感受和印象。 
 |     |     |     |
 | --- | --- | --- |
 | <span class="bg-blue c-white  px-2">1. 微動畫 Motion Design 設計</span> | <span class="bg-blue c-white px-2">2. 3D元素</span> | 3. 快速登入介面 |
@@ -67,7 +77,7 @@ css: unocss
 ----
 
 ## 技術類
-
+近年新起的技術應用
 |     |     |     |
 | --- | --- | --- |
 | 1. 應用 AI 和機器學習技術  | <span class="bg-blue c-white px-2">2. 虛擬實境 ( AR 或 VR )</span> |  3. 跨app應用設計 |
@@ -76,14 +86,14 @@ css: unocss
 ---
 
 ## 資訊圖表 / 資訊視覺化
-
+將複雜、龐大的資訊資料轉換成視覺圖像，以便閱讀者更容易理解。
 - [COVID-19 Dashboard by Johns Hopkins University](https://coronavirus.jhu.edu/map.html)
 
 ![Local Image](/01_資訊圖表.png)
 ---
 
-## 微動畫設計
-
+## 微互動設計
+微動畫技術各平台兼容性完善，製作上較為輕省，且能有效增加網站的互動性、回饋性與親切感。
 <div class="flex w-screen">
 <div class="p-5">
   <h3 class="mb-2"><a href="https://www.airbnb.com.tw">airbnb</a></h3>
@@ -101,6 +111,7 @@ css: unocss
 ---
 
 ## 3D元素
+隨著WebGL等網頁技術的發展，3D元素在網頁上的應用越來越廣泛。
 
 <div class="flex w-screen">
 <div class="p-5">
@@ -117,8 +128,7 @@ css: unocss
 ---
 
 ## 虛擬實境 ( AR 或 VR )
-
-
+近年因 5G 技術新起，虛擬實境的應用更為廣泛。
 <div class="flex w-screen">
 <div class="p-5">
   <h3 class="mb-2"><a href="https://petitegalerie.louvre.fr/visite-virtuelle/saison6/">線上博物館</a></h3>
@@ -136,7 +146,7 @@ css: unocss
 ---
 
 ## 情感設計
-
+能予以使用者回饋訊息，增加網站易用性。
 <div class="flex w-screen">
   <div class="p-5">
     <h3 class="mb-2">404</h3>
@@ -161,7 +171,9 @@ css: unocss
 ---
 
 ## 深色模式
-
+1. 減少電量的消耗
+2. 為視力不佳的用戶、對強光敏感的用戶，提供更好的可視性
+3. 讓任何人都能在暗光環境中使用智慧型手機
 
 <div class="flex w-screen">
   <div class="p-5">
@@ -187,7 +199,7 @@ css: unocss
 ---
 
 ## 深度個人化
-
+指基於用戶的個人資料、偏好和行為數據等信息，通過機器學習和其他技術對網站進行高度個性化的定制。
 
 <div class="flex w-screen">
   <div class="p-5">
@@ -274,14 +286,4 @@ GA 可以追蹤你的網站訪客的互動行為，例如點擊事件、表單�
 | 符合語意化標籤規範   |  META 設置   |  使用 sitemap.xml  |
 |   <div class="w-40">![Local Image](/23_website_html5_area.png) </div>  |   <div class="w-80">![Local Image](/24_metadata.jpg)</div>   |   <div class="w-60">![Local Image](/25_sitemap.png)</div> |
 
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
+
