@@ -1,6 +1,6 @@
 ---
 theme: seriph
-background: https://source.unsplash.com/collection/94734566/1920x1080
+background: https://images.unsplash.com/photo-1616877244288-9a29d8d2693d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=MnwxfDB8MXxyYW5kb218MHw5NDczNDU2Nnx8fHx8fHwxNjc4ODQ2MzYy&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920
 class: 'text-center'
 highlighter: shiki
 lineNumbers: false
@@ -25,9 +25,10 @@ fonts:
   </span>
 </div>
 
+
 ---
 layout: image-left
-image: https://source.unsplash.com/collection/94734566/1920x1080
+image: https://images.unsplash.com/photo-1616877244288-9a29d8d2693d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=MnwxfDB8MXxyYW5kb218MHw5NDczNDU2Nnx8fHx8fHwxNjc4ODQ2MzYy&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920
 ---
 
 # 大綱
@@ -35,29 +36,30 @@ image: https://source.unsplash.com/collection/94734566/1920x1080
 
 |     |     |
 | --- | --- |
-| PART 1 | <Link to="3">回顧分享內容</Link> |
-| PART 2 | <Link to="4">2023介面趨勢</Link> |
-| PART 3 | <Link to="14">GA4</Link> |
-| PART 4 | <Link to="18">SEO</Link> |
+| <div class="vtt">PART 1</div> | <Link to="3">回顧分享內容</Link> |
+| <div class="vtt">PART 2</div> | <Link to="4">2023介面設計趨勢</Link> |
+| <div class="vtt">PART 3</div> | <Link to="14">GA4</Link> |
+| <div class="vtt">PART 4</div> | <Link to="18">SEO</Link> |
 
 
 ---
 
 # 回顧分享內容
+<div class="narrow">
 
 |     |     |
 | --- | --- |
 | <div class="vtt">內部分享會</div> | [SEO ➞](https://hackmd.io/@Eb6w0suDT--2ZKCyQxBjNw/rkrK96Nwq)<div class='mt-3'>[你所不知道的網頁設計眉角 ➞](https://hackmd.io/@Eb6w0suDT--2ZKCyQxBjNw/rJhKIt38j)</div>  |
-| <div class="vtt">2023 UIUX 趨勢</div> | [2023十大實用網頁UIUX趨勢預測 ➞](https://blog.simular.co/2023%E5%8D%81%E5%A4%A7%E5%AF%A6%E7%94%A8%E7%B6%B2%E9%A0%81uiux%E8%B6%A8%E5%8B%A2%E9%A0%90%E6%B8%AC-606ee6d0b37a)<div class='mt-3'>[2023前十大，網頁設計風格、元素趨勢預測 ➞](https://blog.simular.co/2023%E5%89%8D%E5%8D%81%E5%A4%A7-%E7%B6%B2%E9%A0%81%E8%A8%AD%E8%A8%88%E9%A2%A8%E6%A0%BC-%E5%85%83%E7%B4%A0%E8%B6%A8%E5%8B%A2%E9%A0%90%E6%B8%AC-42890b55efaf)</div> |
+| <div class="vtt">2023 介面設計趨勢</div> | [2023十大實用網頁UIUX趨勢預測 ➞](https://blog.simular.co/2023%E5%8D%81%E5%A4%A7%E5%AF%A6%E7%94%A8%E7%B6%B2%E9%A0%81uiux%E8%B6%A8%E5%8B%A2%E9%A0%90%E6%B8%AC-606ee6d0b37a)<div class='mt-3'>[2023前十大，網頁設計風格、元素趨勢預測 ➞](https://blog.simular.co/2023%E5%89%8D%E5%8D%81%E5%A4%A7-%E7%B6%B2%E9%A0%81%E8%A8%AD%E8%A8%88%E9%A2%A8%E6%A0%BC-%E5%85%83%E7%B4%A0%E8%B6%A8%E5%8B%A2%E9%A0%90%E6%B8%AC-42890b55efaf)</div> |
 | <div class="vtt">GA</div> | [GA分析是什麼？2023最好懂的Google Analytics教學 ➞](https://welly.tw/digital-marketing/google-analytics-instruction)<div class="mt-3">[2023 最新 Google Analytics 完整解析：搞懂GA四大報表與觀察重點 ➞](https://ranking.works/knowledge/googleanalytics%E6%95%99%E5%AD%B8/)</div><div class="mt-3">[GA4是什麼？Google Analytics 4基本功能介紹篇｜天矽科技客製化網頁設計 ➞](https://www.tsg.com.tw/blog-detail168-ga4.htm)</div> |
 | <div class="vtt">SEO</div> | [2023 SEO十大趨勢，讓企業掌握流量新高度 ➞](https://awoo.ai/zh-hant/blog/2023-seo-trends/)<div class="mt-3">[數位時代下的品牌經營，教你如何運用 SEO+AI 提高品牌信任 ➞](https://awoo.ai/zh-hant/blog/use-seo-and-ai-to-improve-brand-trust/)</div> |
  
-
+</div>
 ---
 
-# 2023介面趨勢
+# 2023介面設計趨勢
 
-## 介面設計
+## 視覺設計
 著重的是使用者介面的呈現，如：視覺美感、設計美學、便利性、風格呈現，細節更包含了字型、字體大小、顏色、標誌、按鍵、動畫效果等。
 |     |     |     |
 | --- | --- | --- |
@@ -77,7 +79,7 @@ image: https://source.unsplash.com/collection/94734566/1920x1080
 ----
 
 ## 技術類
-近年新起的技術應用
+近年新起的技術應用。
 |     |     |     |
 | --- | --- | --- |
 | 1. 應用 AI 和機器學習技術  | 2. <span class="mark">虛擬實境 ( AR 或 VR )</span> |  3. 跨app應用設計 |
@@ -89,7 +91,7 @@ image: https://source.unsplash.com/collection/94734566/1920x1080
 將複雜、龐大的資訊資料轉換成視覺圖像，以便閱讀者更容易理解。
 ### [COVID-19 Dashboard by Johns Hopkins University](https://coronavirus.jhu.edu/map.html)
 
- <img src="/01_資訊圖表.png" class="w-190 mt-6 ml-14">
+ <img src="/01_資訊圖表.png" class="w-180 mt-6 ml-18">
 ---
 
 ## 微互動設計
@@ -289,7 +291,10 @@ GA 可以追蹤你的網站訪客的互動行為，例如點擊事件、表單�
   <div class="pl-2 pt-3 w-100">
      
 1. 新的事件追蹤目標，並給它一個描述性名稱
-2. 在你的網站代碼中插入事件追蹤程式碼， `onclick="ga('send', 'event', '分類', '動作', '標籤');"`
+2. 在你的網站代碼中插入事件追蹤程式碼，
+```javascript
+onclick="ga('send', 'event', '分類', '動作', '標籤');"
+```
 3. 在 GA 中設定自訂報告或使用預設報告來檢視事件追蹤資料
 
   </div>  
@@ -304,7 +309,7 @@ GA 可以追蹤你的網站訪客的互動行為，例如點擊事件、表單�
 |   <div class="w-40">![Local Image](/23_website_html5_area.png) </div>  |   <div class="w-80">![Local Image](/24_metadata.jpg)</div>   |   <div class="w-60">![Local Image](/25_sitemap.png)</div> | -->
 
 
-<div class="flex w-screen">
+<div class="flex w-screen mt-12">
   <div class="pr-4">
     <h3>符合語意化標籤規範</h3>
     <span>
@@ -314,13 +319,13 @@ GA 可以追蹤你的網站訪客的互動行為，例如點擊事件、表單�
   <div class="px-6">
     <h3>META 設置</h3>
     <span>
-      <img src="/24_metadata.jpg" class="w-90 mt-4">
+      <img src="/24_metadata.jpg" class="w-86 mt-4">
     </span>
   </div>
   <div class="pl-4">
     <h3>使用 sitemap.xml</h3>
     <span>
-      <img src="/25_sitemap.png" class="w-60 mt-4">
+      <img src="/25_sitemap.png" class="w-56 mt-4">
     </span>
   </div>
 </div>
