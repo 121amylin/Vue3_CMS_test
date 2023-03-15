@@ -1,43 +1,91 @@
 $c_color_1: #1e40af;
 $c_color_2: #60a5fa;
 $c_color_3: #eff6ff;
+
+.slidev-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.mark {
+    border-radius: 50px;
+    background-color: $c_color_2;
+    color: #fff;
+    padding: 4px 16px;
+}
 .slidev-layout {
     h1 {
         color: $c_color_1;
         font-weight: 700;
         text-align: center;
+        width: 100%;
     }
     h2 {
-        padding-left: 24px;
         font-weight: 700;
-        border-left: 5px solid $c_color_2;
         border-radius: 50px;
         position: relative;
+        padding: 4px 16px 6px 44px;
+        letter-spacing: 6px;
+
+        background-color: $c_color_2;
+        color: #fff;
+        display: inline-block;
         &::before {
             content: "";
             position: absolute;
-            width: 8px;
-            height: 8px;
+            width: 26px;
+            height: 26px;
             border-radius: 50%;
             background-color: $c_color_2;
-            top: calc(50% - 4px);
-            left: 8px;
+            top: calc(50% - 13px);
+            left: 12px;
+            border: 6px solid #fff;
         }
+    }
+    h3 {
+        position: relative;
+        padding-left: 14px;
+        &::before {
+            content: "";
+            display: block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 5px solid $c_color_2;
+            position: absolute;
+            left: 0;
+            transform: translateX(-50%);
+            top: calc(50% - 4px);
+        }
+    }
+    p {
+        text-decoration: wavy underline $c_color_2;
+        line-height: 1.75;
+    }
+    img {
+        border-radius: 8px;
+        box-shadow: 0 0 14px rgba(0, 0, 0, 0.6);
+        // border: 1px solid #999;
+    }
+    th {
+        text-align: center;
+    }
+    a {
+        &:hover {
+            color: $c_color_2;
+            transition: color 0.2s;
+        }
+    }
+    .vtt {
+        text-align: right;
+        color: $c_color_2;
+        font-size: 20px;
+        font-weight: 700;
+        margin-right: 16px;
     }
 }
 
 table tbody tr:nth-child(even) {
     background-color: $c_color_3;
-}
-p {
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: wavy underline $c_color_2;
-    line-height: 1.5;
-}
-img {
-    border-radius: 8px;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6), 0 6px 20px rgba(0, 0, 0, 0.6);
-    border-top: 1px solid #fff;
-    border-left: 1px solid #fff;
 }
