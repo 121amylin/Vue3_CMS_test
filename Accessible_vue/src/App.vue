@@ -1,20 +1,20 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
   <div>
     <header>
       <div class="wrapper">
-        <nav style="margin-bottom:30px">
+        <nav style="margin-bottom: 30px">
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/about">About</RouterLink>
           <RouterLink to="/carousel">Carousel</RouterLink>
+          <RouterLink to="/carousel2">Carousel2</RouterLink>
           <RouterLink to="/tabs">tabs</RouterLink>
           <RouterLink to="/modal">modal</RouterLink>
           <RouterLink to="/accordion">accordion</RouterLink>
           <RouterLink to="/tooltips">tooltips</RouterLink>
-
         </nav>
       </div>
     </header>
