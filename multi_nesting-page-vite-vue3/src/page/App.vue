@@ -4,8 +4,16 @@ import HelloWorld from '../components/HelloWorld.vue'
 
 
 const gomap = () => {
-  // router.push('/map/')
   window.location.href = '/map/'
+}
+const goadmin_index = () => {
+  window.location.href = '/admin/'
+}
+const gounit_A = () => {
+  window.location.href = '/unit_A/'
+}
+const gounit_B = () => {
+  window.location.href = '/unit_B/'
 }
 </script>
 
@@ -26,6 +34,9 @@ const gomap = () => {
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <button @click="gomap">map</button>
+        <button @click="goadmin_index">admin index</button>
+        <button @click="gounit_A">admin unitA</button>
+        <button @click="gounit_B">admin unitB</button>
         <!-- <RouterLink to="/map/">map</RouterLink> -->
       </nav>
     </div>
