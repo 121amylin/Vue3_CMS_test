@@ -23,6 +23,15 @@ const router = createRouter({
       path: "/carousel2",
       name: "carousel2",
       component: () => import("../views/CarouselView2.vue"),
+    }, {
+      path: "/carousel3",
+      name: "carousel3",
+      component: () => import("../views/CarouselView3.vue"),
+    },
+    {
+      path: "/carousel4",
+      name: "carousel4",
+      component: () => import("../views/CarouselView4.vue"),
     },
     {
       path: "/tabs",
