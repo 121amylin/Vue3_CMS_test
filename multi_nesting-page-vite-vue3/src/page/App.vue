@@ -19,6 +19,9 @@ const gounit_B = () => {
 
 <template>
   <header>
+    <v-btn>
+      Button
+    </v-btn>
     <img
       alt="Vue logo"
       class="logo"
@@ -41,7 +44,9 @@ const gounit_B = () => {
       </nav>
     </div>
   </header>
-
+  <v-btn>
+    Button
+  </v-btn>
   <RouterView />
 </template>
 
