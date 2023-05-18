@@ -212,7 +212,9 @@ const tab = ref(null)
           </v-window-item>
 
           <v-window-item value="two">
-            Two
+            <h1 className="bg-orange-400 text-3xl font-bold underline">
+              Hello world!
+            </h1>
           </v-window-item>
         </v-window>
       </v-card-text>
